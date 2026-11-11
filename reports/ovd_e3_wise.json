@@ -1,0 +1,633 @@
+{
+  "frames": 548,
+  "half": "all",
+  "teacher": "sam3",
+  "tau": 0.5,
+  "imgsz": 1280,
+  "models": {
+    "zeroshot": "yoloe-26s-seg.pt",
+    "tuned": "weights/yoloe-26s-drone-ov.pt",
+    "wise25": "wise25.pt",
+    "wise50": "wise50.pt",
+    "wise75": "wise75.pt"
+  },
+  "groups": {
+    "visdrone": {
+      "reference": "human labels",
+      "instances": 38759,
+      "AP": {
+        "zeroshot": 11.58,
+        "tuned": 31.92,
+        "wise25": 10.62,
+        "wise50": 18.09,
+        "wise75": 27.84
+      },
+      "AP_ci_seq": {
+        "zeroshot": [
+          10.37,
+          12.74
+        ]
+      },
+      "diff_vs_zeroshot": {
+        "tuned": {
+          "diff": 20.34,
+          "ci95_seq": [
+            18.8,
+            22.17
+          ]
+        },
+        "wise25": {
+          "diff": -0.96,
+          "ci95_seq": [
+            -1.58,
+            -0.33
+          ]
+        },
+        "wise50": {
+          "diff": 6.51,
+          "ci95_seq": [
+            5.76,
+            7.32
+          ]
+        },
+        "wise75": {
+          "diff": 16.26,
+          "ci95_seq": [
+            15.15,
+            17.63
+          ]
+        }
+      },
+      "per_concept": {
+        "zeroshot": {
+          "person walking or standing": 12.28,
+          "person sitting or riding": 4.48,
+          "bicycle": 3.96,
+          "car": 39.44,
+          "van": 11.17,
+          "truck": 9.94,
+          "three-wheeled tricycle": 1.4,
+          "tricycle with a canopy": 0.39,
+          "bus": 23.5,
+          "motorcycle": 9.2
+        },
+        "tuned": {
+          "person walking or standing": 34.15,
+          "person sitting or riding": 21.58,
+          "bicycle": 16.09,
+          "car": 63.3,
+          "van": 35.24,
+          "truck": 32.56,
+          "three-wheeled tricycle": 23.78,
+          "tricycle with a canopy": 10.8,
+          "bus": 49.29,
+          "motorcycle": 32.38
+        },
+        "wise25": {
+          "person walking or standing": 16.17,
+          "person sitting or riding": 1.6,
+          "bicycle": 2.15,
+          "car": 40.7,
+          "van": 13.95,
+          "truck": 6.15,
+          "three-wheeled tricycle": 0.89,
+          "tricycle with a canopy": 1.29,
+          "bus": 18.69,
+          "motorcycle": 4.58
+        },
+        "wise50": {
+          "person walking or standing": 24.7,
+          "person sitting or riding": 7.06,
+          "bicycle": 6.23,
+          "car": 52.7,
+          "van": 20.61,
+          "truck": 16.19,
+          "three-wheeled tricycle": 6.93,
+          "tricycle with a canopy": 4.91,
+          "bus": 28.35,
+          "motorcycle": 13.21
+        },
+        "wise75": {
+          "person walking or standing": 32.47,
+          "person sitting or riding": 17.45,
+          "bicycle": 13.2,
+          "car": 60.36,
+          "van": 29.89,
+          "truck": 27.14,
+          "three-wheeled tricycle": 19.81,
+          "tricycle with a canopy": 9.84,
+          "bus": 40.75,
+          "motorcycle": 27.51
+        }
+      }
+    },
+    "seen": {
+      "reference": "sam3 labels, score >= 0.5",
+      "instances": 39224,
+      "AP": {
+        "zeroshot": 4.05,
+        "tuned": 16.14,
+        "wise25": 2.83,
+        "wise50": 6.0,
+        "wise75": 13.58
+      },
+      "AP_ci_seq": {
+        "zeroshot": [
+          3.67,
+          4.86
+        ]
+      },
+      "diff_vs_zeroshot": {
+        "tuned": {
+          "diff": 12.09,
+          "ci95_seq": [
+            10.7,
+            13.61
+          ]
+        },
+        "wise25": {
+          "diff": -1.22,
+          "ci95_seq": [
+            -1.87,
+            -0.79
+          ]
+        },
+        "wise50": {
+          "diff": 1.95,
+          "ci95_seq": [
+            1.18,
+            2.65
+          ]
+        },
+        "wise75": {
+          "diff": 9.53,
+          "ci95_seq": [
+            7.83,
+            11.03
+          ]
+        }
+      },
+      "per_concept": {
+        "zeroshot": {
+          "tree": 1.09,
+          "building": 1.82,
+          "bush": 1.6,
+          "traffic light": 21.17,
+          "street lamp": 17.53,
+          "utility pole": 2.44,
+          "traffic sign": 26.68,
+          "road barrier": 0.79,
+          "crosswalk": 1.14,
+          "billboard": 11.46,
+          "tent": 4.43,
+          "market stall": 1.27,
+          "construction crane": 12.9,
+          "excavator": 2.61,
+          "scaffolding": 0.56,
+          "shipping container": 0.68,
+          "manhole cover": 10.54,
+          "solar panel": 0.01,
+          "swimming pool": 0.0,
+          "basketball court": 0.0,
+          "football field": 0.0,
+          "gate": 0.37,
+          "bridge": 0.16,
+          "table": 0.0,
+          "handcart": 0.99,
+          "baby stroller": 1.08,
+          "dog": 10.81,
+          "cow": 0.0,
+          "horse": 0.0,
+          "bird": 1.02,
+          "flag": 6.76,
+          "statue": 0.0,
+          "fountain": 0.0,
+          "stairs": 1.37,
+          "water tank": 0.36
+        },
+        "tuned": {
+          "tree": 52.1,
+          "building": 47.73,
+          "bush": 37.49,
+          "traffic light": 30.62,
+          "street lamp": 31.94,
+          "utility pole": 12.64,
+          "traffic sign": 35.12,
+          "road barrier": 24.69,
+          "crosswalk": 26.61,
+          "billboard": 35.2,
+          "tent": 16.18,
+          "market stall": 17.53,
+          "construction crane": 7.26,
+          "excavator": 15.41,
+          "scaffolding": 8.79,
+          "shipping container": 2.83,
+          "manhole cover": 45.1,
+          "solar panel": 27.4,
+          "swimming pool": 0.0,
+          "basketball court": 13.17,
+          "football field": 16.83,
+          "gate": 7.74,
+          "bridge": 4.45,
+          "table": 9.83,
+          "handcart": 0.39,
+          "baby stroller": 0.39,
+          "dog": 3.19,
+          "cow": 4.84,
+          "horse": 0.0,
+          "bird": 1.01,
+          "flag": 5.05,
+          "statue": 3.33,
+          "fountain": 0.0,
+          "stairs": 14.88,
+          "water tank": 5.18
+        },
+        "wise25": {
+          "tree": 8.17,
+          "building": 2.67,
+          "bush": 3.07,
+          "traffic light": 10.27,
+          "street lamp": 8.87,
+          "utility pole": 3.75,
+          "traffic sign": 25.57,
+          "road barrier": 0.26,
+          "crosswalk": 0.0,
+          "billboard": 9.73,
+          "tent": 5.32,
+          "market stall": 0.0,
+          "construction crane": 0.0,
+          "excavator": 1.21,
+          "scaffolding": 0.89,
+          "shipping container": 3.92,
+          "manhole cover": 5.53,
+          "solar panel": 0.08,
+          "swimming pool": 0.0,
+          "basketball court": 0.0,
+          "football field": 0.0,
+          "gate": 0.0,
+          "bridge": 0.0,
+          "table": 0.0,
+          "handcart": 0.0,
+          "baby stroller": 0.5,
+          "dog": 2.97,
+          "cow": 0.0,
+          "horse": 0.0,
+          "bird": 0.0,
+          "flag": 5.42,
+          "statue": 0.0,
+          "fountain": 0.0,
+          "stairs": 0.79,
+          "water tank": 0.0
+        },
+        "wise50": {
+          "tree": 24.41,
+          "building": 18.99,
+          "bush": 12.71,
+          "traffic light": 19.61,
+          "street lamp": 15.0,
+          "utility pole": 7.09,
+          "traffic sign": 32.19,
+          "road barrier": 0.58,
+          "crosswalk": 1.38,
+          "billboard": 19.06,
+          "tent": 9.5,
+          "market stall": 3.18,
+          "construction crane": 0.35,
+          "excavator": 7.1,
+          "scaffolding": 2.78,
+          "shipping container": 3.42,
+          "manhole cover": 18.32,
+          "solar panel": 2.0,
+          "swimming pool": 0.0,
+          "basketball court": 0.0,
+          "football field": 0.0,
+          "gate": 1.06,
+          "bridge": 0.0,
+          "table": 0.2,
+          "handcart": 0.37,
+          "baby stroller": 0.0,
+          "dog": 0.0,
+          "cow": 0.0,
+          "horse": 0.0,
+          "bird": 0.0,
+          "flag": 5.44,
+          "statue": 0.0,
+          "fountain": 0.0,
+          "stairs": 5.27,
+          "water tank": 0.12
+        },
+        "wise75": {
+          "tree": 44.3,
+          "building": 40.78,
+          "bush": 27.55,
+          "traffic light": 29.15,
+          "street lamp": 27.62,
+          "utility pole": 12.59,
+          "traffic sign": 36.17,
+          "road barrier": 11.31,
+          "crosswalk": 18.71,
+          "billboard": 31.36,
+          "tent": 14.85,
+          "market stall": 17.03,
+          "construction crane": 4.81,
+          "excavator": 18.65,
+          "scaffolding": 4.34,
+          "shipping container": 0.03,
+          "manhole cover": 37.31,
+          "solar panel": 17.38,
+          "swimming pool": 0.0,
+          "basketball court": 0.53,
+          "football field": 0.0,
+          "gate": 4.48,
+          "bridge": 3.19,
+          "table": 6.63,
+          "handcart": 0.3,
+          "baby stroller": 0.75,
+          "dog": 0.89,
+          "cow": 14.81,
+          "horse": 25.25,
+          "bird": 1.78,
+          "flag": 5.08,
+          "statue": 2.8,
+          "fountain": 0.0,
+          "stairs": 11.3,
+          "water tank": 3.44
+        }
+      },
+      "count_mae": {
+        "zeroshot": {
+          "0.05": 2.026,
+          "0.1": 2.01,
+          "0.15": 2.01,
+          "0.2": 2.013,
+          "0.25": 2.016,
+          "0.3": 2.02,
+          "0.35": 2.022,
+          "0.4": 2.024,
+          "0.45": 2.027,
+          "0.5": 2.029,
+          "0.55": 2.032,
+          "0.6": 2.034
+        },
+        "tuned": {
+          "0.05": 2.568,
+          "0.1": 1.364,
+          "0.15": 0.962,
+          "0.2": 0.827,
+          "0.25": 0.823,
+          "0.3": 0.881,
+          "0.35": 0.972,
+          "0.4": 1.071,
+          "0.45": 1.171,
+          "0.5": 1.271,
+          "0.55": 1.372,
+          "0.6": 1.465
+        },
+        "wise25": {
+          "0.05": 2.001,
+          "0.1": 2.029,
+          "0.15": 2.037,
+          "0.2": 2.041,
+          "0.25": 2.043,
+          "0.3": 2.044,
+          "0.35": 2.044,
+          "0.4": 2.045,
+          "0.45": 2.045,
+          "0.5": 2.045,
+          "0.55": 2.045,
+          "0.6": 2.045
+        },
+        "wise50": {
+          "0.05": 1.708,
+          "0.1": 1.864,
+          "0.15": 1.931,
+          "0.2": 1.969,
+          "0.25": 1.993,
+          "0.3": 2.01,
+          "0.35": 2.022,
+          "0.4": 2.031,
+          "0.45": 2.037,
+          "0.5": 2.04,
+          "0.55": 2.042,
+          "0.6": 2.044
+        },
+        "wise75": {
+          "0.05": 1.021,
+          "0.1": 1.107,
+          "0.15": 1.282,
+          "0.2": 1.404,
+          "0.25": 1.503,
+          "0.3": 1.584,
+          "0.35": 1.65,
+          "0.4": 1.71,
+          "0.45": 1.768,
+          "0.5": 1.82,
+          "0.55": 1.864,
+          "0.6": 1.901
+        }
+      }
+    },
+    "heldout": {
+      "reference": "sam3 labels, score >= 0.5",
+      "instances": 2993,
+      "AP": {
+        "zeroshot": 8.39,
+        "tuned": 0.0,
+        "wise25": 0.06,
+        "wise50": 0.0,
+        "wise75": 0.0
+      },
+      "AP_ci_seq": {
+        "zeroshot": [
+          6.95,
+          10.74
+        ]
+      },
+      "diff_vs_zeroshot": {
+        "tuned": {
+          "diff": -8.39,
+          "ci95_seq": [
+            -10.74,
+            -6.95
+          ]
+        },
+        "wise25": {
+          "diff": -8.33,
+          "ci95_seq": [
+            -10.67,
+            -6.89
+          ]
+        },
+        "wise50": {
+          "diff": -8.39,
+          "ci95_seq": [
+            -10.74,
+            -6.95
+          ]
+        },
+        "wise75": {
+          "diff": -8.39,
+          "ci95_seq": [
+            -10.74,
+            -6.95
+          ]
+        }
+      },
+      "per_concept": {
+        "zeroshot": {
+          "umbrella": 18.37,
+          "trash can": 16.04,
+          "bench": 3.3,
+          "potted plant": 13.78,
+          "traffic cone": 7.66,
+          "chair": 1.02,
+          "boat": 0.0,
+          "fire hydrant": 6.92
+        },
+        "tuned": {
+          "umbrella": 0.0,
+          "trash can": 0.0,
+          "bench": 0.0,
+          "potted plant": 0.0,
+          "traffic cone": 0.0,
+          "chair": 0.0,
+          "boat": 0.0,
+          "fire hydrant": 0.0
+        },
+        "wise25": {
+          "umbrella": 0.5,
+          "trash can": 0.0,
+          "bench": 0.0,
+          "potted plant": 0.0,
+          "traffic cone": 0.0,
+          "chair": 0.0,
+          "boat": 0.0,
+          "fire hydrant": 0.0
+        },
+        "wise50": {
+          "umbrella": 0.0,
+          "trash can": 0.0,
+          "bench": 0.0,
+          "potted plant": 0.0,
+          "traffic cone": 0.0,
+          "chair": 0.0,
+          "boat": 0.0,
+          "fire hydrant": 0.0
+        },
+        "wise75": {
+          "umbrella": 0.0,
+          "trash can": 0.0,
+          "bench": 0.0,
+          "potted plant": 0.0,
+          "traffic cone": 0.0,
+          "chair": 0.0,
+          "boat": 0.0,
+          "fire hydrant": 0.0
+        }
+      },
+      "count_mae": {
+        "zeroshot": {
+          "0.05": 0.914,
+          "0.1": 0.715,
+          "0.15": 0.664,
+          "0.2": 0.651,
+          "0.25": 0.647,
+          "0.3": 0.649,
+          "0.35": 0.65,
+          "0.4": 0.653,
+          "0.45": 0.656,
+          "0.5": 0.661,
+          "0.55": 0.664,
+          "0.6": 0.669
+        },
+        "tuned": {
+          "0.05": 0.683,
+          "0.1": 0.683,
+          "0.15": 0.683,
+          "0.2": 0.683,
+          "0.25": 0.683,
+          "0.3": 0.683,
+          "0.35": 0.683,
+          "0.4": 0.683,
+          "0.45": 0.683,
+          "0.5": 0.683,
+          "0.55": 0.683,
+          "0.6": 0.683
+        },
+        "wise25": {
+          "0.05": 0.683,
+          "0.1": 0.683,
+          "0.15": 0.683,
+          "0.2": 0.683,
+          "0.25": 0.683,
+          "0.3": 0.683,
+          "0.35": 0.683,
+          "0.4": 0.683,
+          "0.45": 0.683,
+          "0.5": 0.683,
+          "0.55": 0.683,
+          "0.6": 0.683
+        },
+        "wise50": {
+          "0.05": 0.683,
+          "0.1": 0.683,
+          "0.15": 0.683,
+          "0.2": 0.683,
+          "0.25": 0.683,
+          "0.3": 0.683,
+          "0.35": 0.683,
+          "0.4": 0.683,
+          "0.45": 0.683,
+          "0.5": 0.683,
+          "0.55": 0.683,
+          "0.6": 0.683
+        },
+        "wise75": {
+          "0.05": 0.683,
+          "0.1": 0.683,
+          "0.15": 0.683,
+          "0.2": 0.683,
+          "0.25": 0.683,
+          "0.3": 0.683,
+          "0.35": 0.683,
+          "0.4": 0.683,
+          "0.45": 0.683,
+          "0.5": 0.683,
+          "0.55": 0.683,
+          "0.6": 0.683
+        }
+      }
+    }
+  },
+  "app_threshold": {
+    "zeroshot": 0.1,
+    "tuned": 0.25,
+    "wise25": 0.05,
+    "wise50": 0.05,
+    "wise75": 0.05
+  },
+  "app_threshold_heldout_mae": {
+    "zeroshot": 0.715,
+    "tuned": 0.683,
+    "wise25": 0.683,
+    "wise50": 0.683,
+    "wise75": 0.683
+  },
+  "decision": {
+    "H1_visdrone_better": true,
+    "H2_seen_better": true,
+    "H3_open_vocab_preserved": false,
+    "H3_unseen_words_improve": false,
+    "adopt_in_app": false
+  },
+  "note": "Exploratory, chosen after seeing E3: weight-space blends theta(a) = (1-a) zero-shot + a tuned, a in {0.25, 0.5, 0.75}, re-scored on CPU (zeroshot/tuned reproduce the Kaggle run exactly). No blend keeps the held-out words; a = 0.1 already drops the mean best held-out score on 12 probe frames from 0.27 to 0.02. Component swap (tuned part into zero-shot model, mean best held-out score on 6 probe frames, zero-shot 0.36): cv4 contrastive head 0.05 (BatchNorm running_var 0.16 -> 1.03), RepRTA 0.04, neck 0.11, cv3 0.22, backbone 0.32, box branch 0.36.",
+  "component_swap_probe": {
+    "zero_shot": 0.36,
+    "backbone": 0.319,
+    "neck": 0.107,
+    "head.cv2": 0.36,
+    "head.cv3": 0.217,
+    "head.cv4": 0.05,
+    "head.reprta": 0.041
+  }
+}

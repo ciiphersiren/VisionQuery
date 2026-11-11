@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# runtime files written by the app
+cache/
+data/
+runs/
+
+# downloaded automatically by Ultralytics on first use (not ours to redistribute)
+yoloe-*-seg.pt
+yolo26s.pt
+mobileclip*.ts
+
+# frontend
+frontend/node_modules/
+frontend/tsconfig.tsbuildinfo
+# frontend/dist/ is committed on purpose: the app serves it, so no Node build is needed to run VisionQuery
+
+# editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

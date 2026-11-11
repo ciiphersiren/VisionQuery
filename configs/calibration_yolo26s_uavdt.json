@@ -1,0 +1,19 @@
+{
+ "version": "capstone-2026-11-09",
+ "pipelines": {
+  "fi1024": {
+   "count_thresholds": {
+    "car": 0.33,
+    "truck": 0.15,
+    "bus": 0.9
+   },
+   "exist_thresholds": {
+    "car": 0.33,
+    "truck": 0.15,
+    "bus": 0.9
+   },
+   "global_threshold": 0.33,
+   "source": "Tuned on UAVDT val (lowest whole-image MAE), same rule as the VisDrone thresholds"
+  }
+ }
+}

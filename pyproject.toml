@@ -1,0 +1,36 @@
+[project]
+name = "skyquery"
+version = "0.3.0"
+description = "Ask questions about drone images; answers are computed from YOLO26 detector boxes on VisDrone."
+requires-python = ">=3.10"
+dependencies = [
+  "ultralytics>=8.4.165",
+  "numpy",
+  "pillow",
+  "pydantic>=2",
+  "pyyaml",
+  "fastapi",
+  "uvicorn",
+  "python-multipart",
+  "httpx",
+]
+
+[project.optional-dependencies]
+eval = ["pycocotools", "scikit-learn", "pandas"]
+dev = ["pytest"]
+sliced = ["sahi==0.12.8", "ensemble-boxes"]   # sliced models and the ensemble
+
+[project.scripts]
+visionquery = "skyquery.cli:main"
+skyquery = "skyquery.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["skyquery*"]
+
+[tool.pytest.ini_options]
+markers = ["slow: runs the detector"]
+testpaths = ["tests"]

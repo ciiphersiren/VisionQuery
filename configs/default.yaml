@@ -1,0 +1,25 @@
+# SkyQuery runtime config. Every key can be overridden with SKYQUERY_<KEY> env vars.
+weights: weights/yolo26s_visdrone_sahi.pt
+calibration: configs/calibration.json
+
+# fi1280 (≈33 ms on a T4) or fi1280+fi1920 (≈103 ms, +1.7 AP on test-dev)
+pipeline: fi1280
+device: cpu          # "0" for the first GPU
+half: false          # fp16 on GPU
+conf_floor: 0.05     # detector floor; counting/existence thresholds are applied later
+max_det: 1000       # dense VisDrone frames hold up to 902 objects (500 could cut boxes)
+fusion: nms          # two-scale fusion
+fusion_iou: 0.5          # val AP 37.13 at 0.5 (0.6 gives 37.32)
+
+# Open-vocabulary branch for anything outside the 10 classes ("dog", "fire truck").
+# YOLOE-26s, text-prompted, zero-shot: answers from it are labelled unverified.
+ovd_enabled: true
+ovd_weights: yoloe-26s-seg.pt   # downloaded by Ultralytics on first use (plus its ~240 MB MobileCLIP text encoder)
+ovd_threshold: 0.1              # novel objects ("dog"): lowest-MAE single threshold for zero-shot YOLOE on val (reports/ovd_e1_val.json)
+ovd_subtype_threshold: 0.05    # sub-types ("fire truck"): the trained detector supplies the box, YOLOE only votes
+
+# rules | llm | rules_first | governed   (rules_first is the recommended policy)
+planner_policy: rules_first
+
+cache_images: 32
+max_upload_mb: 25

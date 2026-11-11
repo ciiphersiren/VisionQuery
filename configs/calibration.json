@@ -1,0 +1,1085 @@
+{
+  "version": "calibrated-2026-10-19",
+  "notes": "Count thresholds: report \u00a76.2 (frozen). Existence thresholds + intervals: skyquery.calibrate.run (val, 5-fold sequence-grouped CV). See reports/.",
+  "pipelines": {
+    "fi1280": {
+      "global_threshold": 0.25,
+      "count_thresholds": {
+        "pedestrian": 0.225,
+        "people": 0.2,
+        "bicycle": 0.225,
+        "car": 0.3,
+        "van": 0.325,
+        "truck": 0.15,
+        "tricycle": 0.225,
+        "awning-tricycle": 0.25,
+        "bus": 0.35,
+        "motor": 0.275
+      },
+      "exist_thresholds": {
+        "pedestrian": 0.05,
+        "people": 0.05,
+        "bicycle": 0.05,
+        "car": 0.05,
+        "van": 0.05,
+        "truck": 0.075,
+        "tricycle": 0.1,
+        "awning-tricycle": 0.05,
+        "bus": 0.05,
+        "motor": 0.05
+      },
+      "exist_threshold_status": "adopted (pre-registered rule passed)",
+      "intervals": {
+        "pedestrian": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 3.0,
+            "rel": false,
+            "n": 39
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -0.5,
+            "q90": 3.0,
+            "rel": true,
+            "n": 62
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -0.333,
+            "q90": 1.34,
+            "rel": true,
+            "n": 90
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -0.3,
+            "q90": 0.98,
+            "rel": true,
+            "n": 113
+          },
+          {
+            "lo_pred": 11,
+            "hi_pred": 20,
+            "q10": -0.2,
+            "q90": 0.561,
+            "rel": true,
+            "n": 135
+          },
+          {
+            "lo_pred": 21,
+            "hi_pred": 40,
+            "q10": -0.248,
+            "q90": 0.257,
+            "rel": true,
+            "n": 72
+          },
+          {
+            "lo_pred": 41,
+            "hi_pred": 1000000,
+            "q10": -0.261,
+            "q90": 0.348,
+            "rel": true,
+            "n": 37
+          }
+        ],
+        "people": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 6.2,
+            "rel": false,
+            "n": 70
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -0.8,
+            "q90": 2.0,
+            "rel": true,
+            "n": 65
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -0.667,
+            "q90": 1.0,
+            "rel": true,
+            "n": 106
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -0.333,
+            "q90": 0.571,
+            "rel": true,
+            "n": 141
+          },
+          {
+            "lo_pred": 11,
+            "hi_pred": 20,
+            "q10": -0.364,
+            "q90": 0.761,
+            "rel": true,
+            "n": 118
+          },
+          {
+            "lo_pred": 21,
+            "hi_pred": 40,
+            "q10": -0.374,
+            "q90": 0.136,
+            "rel": true,
+            "n": 42
+          },
+          {
+            "lo_pred": 41,
+            "hi_pred": 1000000,
+            "q10": -0.372,
+            "q90": 0.197,
+            "rel": true,
+            "n": 54
+          }
+        ],
+        "bicycle": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 3.0,
+            "rel": false,
+            "n": 258
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -1.0,
+            "q90": 2.0,
+            "rel": true,
+            "n": 194
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -0.667,
+            "q90": 1.333,
+            "rel": true,
+            "n": 65
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -0.581,
+            "q90": 0.29,
+            "rel": true,
+            "n": 20
+          },
+          {
+            "lo_pred": 11,
+            "hi_pred": 20,
+            "q10": -0.571,
+            "q90": 0.476,
+            "rel": true,
+            "n": 47
+          }
+        ],
+        "car": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 0.0,
+            "rel": false,
+            "n": 33
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -0.3,
+            "q90": 1.6,
+            "rel": true,
+            "n": 15
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -0.4,
+            "q90": 0.54,
+            "rel": true,
+            "n": 37
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -0.297,
+            "q90": 0.244,
+            "rel": true,
+            "n": 53
+          },
+          {
+            "lo_pred": 11,
+            "hi_pred": 20,
+            "q10": -0.182,
+            "q90": 0.238,
+            "rel": true,
+            "n": 117
+          },
+          {
+            "lo_pred": 21,
+            "hi_pred": 40,
+            "q10": -0.168,
+            "q90": 0.162,
+            "rel": true,
+            "n": 178
+          },
+          {
+            "lo_pred": 41,
+            "hi_pred": 1000000,
+            "q10": -0.194,
+            "q90": 0.176,
+            "rel": true,
+            "n": 115
+          }
+        ],
+        "van": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 2.0,
+            "rel": false,
+            "n": 108
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -1.0,
+            "q90": 2.0,
+            "rel": true,
+            "n": 202
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -0.6,
+            "q90": 0.765,
+            "rel": true,
+            "n": 158
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -0.5,
+            "q90": 0.5,
+            "rel": true,
+            "n": 57
+          },
+          {
+            "lo_pred": 11,
+            "hi_pred": 20,
+            "q10": -0.67,
+            "q90": 0.467,
+            "rel": true,
+            "n": 19
+          },
+          {
+            "lo_pred": 21,
+            "hi_pred": 40,
+            "q10": -0.539,
+            "q90": 0.403,
+            "rel": true,
+            "n": 25
+          }
+        ],
+        "truck": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 1.0,
+            "rel": false,
+            "n": 319
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -1.0,
+            "q90": 2.0,
+            "rel": true,
+            "n": 161
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -0.5,
+            "q90": 0.5,
+            "rel": true,
+            "n": 47
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -0.246,
+            "q90": 0.45,
+            "rel": true,
+            "n": 18
+          },
+          {
+            "lo_pred": 11,
+            "hi_pred": 20,
+            "q10": -0.23,
+            "q90": 0.538,
+            "rel": true,
+            "n": 30
+          }
+        ],
+        "tricycle": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 1.0,
+            "rel": false,
+            "n": 202
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -1.0,
+            "q90": 1.5,
+            "rel": true,
+            "n": 202
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -0.667,
+            "q90": 0.75,
+            "rel": true,
+            "n": 118
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -0.75,
+            "q90": 0.667,
+            "rel": true,
+            "n": 21
+          },
+          {
+            "lo_pred": 11,
+            "hi_pred": 20,
+            "q10": -0.725,
+            "q90": 0.647,
+            "rel": true,
+            "n": 44
+          }
+        ],
+        "awning-tricycle": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 2.0,
+            "rel": false,
+            "n": 366
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -1.0,
+            "q90": 2.75,
+            "rel": true,
+            "n": 156
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -1.0,
+            "q90": 1.15,
+            "rel": true,
+            "n": 23
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -1.0,
+            "q90": 1.292,
+            "rel": true,
+            "n": 26
+          }
+        ],
+        "bus": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 0.0,
+            "rel": false,
+            "n": 447
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -0.4,
+            "q90": 1.0,
+            "rel": true,
+            "n": 83
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -0.429,
+            "q90": 1.0,
+            "rel": true,
+            "n": 101
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -0.409,
+            "q90": 0.217,
+            "rel": true,
+            "n": 18
+          }
+        ],
+        "motor": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 1.0,
+            "rel": false,
+            "n": 68
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -1.0,
+            "q90": 2.0,
+            "rel": true,
+            "n": 80
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -0.333,
+            "q90": 1.25,
+            "rel": true,
+            "n": 101
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -0.333,
+            "q90": 0.5,
+            "rel": true,
+            "n": 133
+          },
+          {
+            "lo_pred": 11,
+            "hi_pred": 20,
+            "q10": -0.308,
+            "q90": 0.418,
+            "rel": true,
+            "n": 119
+          },
+          {
+            "lo_pred": 21,
+            "hi_pred": 40,
+            "q10": -0.379,
+            "q90": 0.186,
+            "rel": true,
+            "n": 44
+          },
+          {
+            "lo_pred": 41,
+            "hi_pred": 1000000,
+            "q10": -0.37,
+            "q90": 0.199,
+            "rel": true,
+            "n": 59
+          }
+        ]
+      },
+      "count_method": "threshold",
+      "val_cv": {
+        "exist_recall": {
+          "pedestrian": 0.998,
+          "people": 0.99,
+          "bicycle": 0.874,
+          "car": 0.996,
+          "van": 0.945,
+          "truck": 0.789,
+          "tricycle": 0.911,
+          "awning-tricycle": 0.723,
+          "bus": 0.771,
+          "motor": 0.986
+        }
+      },
+      "exist_recall": {
+        "pedestrian": 0.957,
+        "people": 0.693,
+        "bicycle": 0.737,
+        "car": 0.995,
+        "van": 0.882,
+        "truck": 0.885,
+        "tricycle": 0.82,
+        "awning-tricycle": 0.639,
+        "bus": 0.913,
+        "motor": 0.909
+      },
+      "exist_precision": {
+        "pedestrian": 0.846,
+        "people": 0.812,
+        "bicycle": 0.668,
+        "car": 0.984,
+        "van": 0.849,
+        "truck": 0.7,
+        "tricycle": 0.602,
+        "awning-tricycle": 0.569,
+        "bus": 0.885,
+        "motor": 0.716
+      },
+      "exist_recall_source": "test-dev, scored once with frozen thresholds (used only for answer caveats)"
+    },
+    "fi1280+fi1920": {
+      "global_threshold": 0.3,
+      "count_thresholds": {
+        "pedestrian": 0.25,
+        "people": 0.225,
+        "bicycle": 0.275,
+        "car": 0.35,
+        "van": 0.375,
+        "truck": 0.275,
+        "tricycle": 0.325,
+        "awning-tricycle": 0.325,
+        "bus": 0.375,
+        "motor": 0.325
+      },
+      "exist_recall": {
+        "pedestrian": 1.0,
+        "people": 0.99,
+        "bicycle": 0.926,
+        "car": 0.998,
+        "van": 0.962,
+        "truck": 0.793,
+        "tricycle": 0.911,
+        "awning-tricycle": 0.764,
+        "bus": 0.824,
+        "motor": 0.992
+      },
+      "exist_thresholds": {
+        "pedestrian": 0.05,
+        "people": 0.05,
+        "bicycle": 0.075,
+        "car": 0.05,
+        "van": 0.05,
+        "truck": 0.25,
+        "tricycle": 0.225,
+        "awning-tricycle": 0.125,
+        "bus": 0.05,
+        "motor": 0.05
+      },
+      "exist_threshold_status": "adopted (pre-registered rule passed)",
+      "intervals": {
+        "pedestrian": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 2.8,
+            "rel": false,
+            "n": 33
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -0.5,
+            "q90": 2.7,
+            "rel": true,
+            "n": 54
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -0.6,
+            "q90": 1.333,
+            "rel": true,
+            "n": 78
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -0.375,
+            "q90": 0.675,
+            "rel": true,
+            "n": 130
+          },
+          {
+            "lo_pred": 11,
+            "hi_pred": 20,
+            "q10": -0.188,
+            "q90": 0.385,
+            "rel": true,
+            "n": 131
+          },
+          {
+            "lo_pred": 21,
+            "hi_pred": 40,
+            "q10": -0.22,
+            "q90": 0.273,
+            "rel": true,
+            "n": 80
+          },
+          {
+            "lo_pred": 41,
+            "hi_pred": 1000000,
+            "q10": -0.234,
+            "q90": 0.261,
+            "rel": true,
+            "n": 42
+          }
+        ],
+        "people": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 6.0,
+            "rel": false,
+            "n": 58
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -1.0,
+            "q90": 1.0,
+            "rel": true,
+            "n": 63
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -0.667,
+            "q90": 0.683,
+            "rel": true,
+            "n": 109
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -0.4,
+            "q90": 0.625,
+            "rel": true,
+            "n": 138
+          },
+          {
+            "lo_pred": 11,
+            "hi_pred": 20,
+            "q10": -0.421,
+            "q90": 0.5,
+            "rel": true,
+            "n": 129
+          },
+          {
+            "lo_pred": 21,
+            "hi_pred": 40,
+            "q10": -0.375,
+            "q90": 0.497,
+            "rel": true,
+            "n": 47
+          },
+          {
+            "lo_pred": 41,
+            "hi_pred": 1000000,
+            "q10": -0.401,
+            "q90": 0.476,
+            "rel": true,
+            "n": 59
+          }
+        ],
+        "bicycle": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 2.0,
+            "rel": false,
+            "n": 224
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -1.0,
+            "q90": 2.0,
+            "rel": true,
+            "n": 205
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -0.667,
+            "q90": 0.9,
+            "rel": true,
+            "n": 75
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -0.565,
+            "q90": 0.476,
+            "rel": true,
+            "n": 35
+          },
+          {
+            "lo_pred": 11,
+            "hi_pred": 20,
+            "q10": -0.5,
+            "q90": 0.521,
+            "rel": true,
+            "n": 58
+          }
+        ],
+        "car": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 0.0,
+            "rel": false,
+            "n": 32
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -0.8,
+            "q90": 1.4,
+            "rel": true,
+            "n": 15
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -0.36,
+            "q90": 0.54,
+            "rel": true,
+            "n": 37
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -0.358,
+            "q90": 0.239,
+            "rel": true,
+            "n": 45
+          },
+          {
+            "lo_pred": 11,
+            "hi_pred": 20,
+            "q10": -0.182,
+            "q90": 0.261,
+            "rel": true,
+            "n": 123
+          },
+          {
+            "lo_pred": 21,
+            "hi_pred": 40,
+            "q10": -0.182,
+            "q90": 0.137,
+            "rel": true,
+            "n": 180
+          },
+          {
+            "lo_pred": 41,
+            "hi_pred": 1000000,
+            "q10": -0.173,
+            "q90": 0.135,
+            "rel": true,
+            "n": 116
+          }
+        ],
+        "van": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 2.0,
+            "rel": false,
+            "n": 105
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -1.0,
+            "q90": 2.0,
+            "rel": true,
+            "n": 197
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -0.667,
+            "q90": 0.795,
+            "rel": true,
+            "n": 172
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -0.633,
+            "q90": 0.375,
+            "rel": true,
+            "n": 53
+          },
+          {
+            "lo_pred": 11,
+            "hi_pred": 20,
+            "q10": -0.194,
+            "q90": 0.727,
+            "rel": true,
+            "n": 20
+          },
+          {
+            "lo_pred": 21,
+            "hi_pred": 40,
+            "q10": -0.29,
+            "q90": 0.615,
+            "rel": true,
+            "n": 23
+          }
+        ],
+        "truck": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 1.0,
+            "rel": false,
+            "n": 287
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -1.0,
+            "q90": 1.5,
+            "rel": true,
+            "n": 189
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -0.55,
+            "q90": 0.575,
+            "rel": true,
+            "n": 48
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -0.333,
+            "q90": 0.625,
+            "rel": true,
+            "n": 21
+          },
+          {
+            "lo_pred": 11,
+            "hi_pred": 20,
+            "q10": -0.375,
+            "q90": 0.4,
+            "rel": true,
+            "n": 31
+          }
+        ],
+        "tricycle": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 1.0,
+            "rel": false,
+            "n": 195
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -1.0,
+            "q90": 2.0,
+            "rel": true,
+            "n": 211
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -0.75,
+            "q90": 0.667,
+            "rel": true,
+            "n": 111
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -0.686,
+            "q90": 0.55,
+            "rel": true,
+            "n": 27
+          },
+          {
+            "lo_pred": 11,
+            "hi_pred": 20,
+            "q10": -0.783,
+            "q90": 0.6,
+            "rel": true,
+            "n": 53
+          }
+        ],
+        "awning-tricycle": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 2.0,
+            "rel": false,
+            "n": 388
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -1.0,
+            "q90": 2.0,
+            "rel": true,
+            "n": 135
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -1.0,
+            "q90": 0.733,
+            "rel": true,
+            "n": 23
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -1.0,
+            "q90": 0.717,
+            "rel": true,
+            "n": 25
+          }
+        ],
+        "bus": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 0.0,
+            "rel": false,
+            "n": 440
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -0.5,
+            "q90": 1.0,
+            "rel": true,
+            "n": 91
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -0.5,
+            "q90": 1.0,
+            "rel": true,
+            "n": 108
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -0.283,
+            "q90": 0.44,
+            "rel": true,
+            "n": 17
+          }
+        ],
+        "motor": [
+          {
+            "lo_pred": 0,
+            "hi_pred": 0,
+            "q10": 0.0,
+            "q90": 1.0,
+            "rel": false,
+            "n": 65
+          },
+          {
+            "lo_pred": 1,
+            "hi_pred": 2,
+            "q10": -1.0,
+            "q90": 2.0,
+            "rel": true,
+            "n": 79
+          },
+          {
+            "lo_pred": 3,
+            "hi_pred": 5,
+            "q10": -0.333,
+            "q90": 1.06,
+            "rel": true,
+            "n": 88
+          },
+          {
+            "lo_pred": 6,
+            "hi_pred": 10,
+            "q10": -0.333,
+            "q90": 0.489,
+            "rel": true,
+            "n": 143
+          },
+          {
+            "lo_pred": 11,
+            "hi_pred": 20,
+            "q10": -0.321,
+            "q90": 0.372,
+            "rel": true,
+            "n": 117
+          },
+          {
+            "lo_pred": 21,
+            "hi_pred": 40,
+            "q10": -0.381,
+            "q90": 0.154,
+            "rel": true,
+            "n": 51
+          },
+          {
+            "lo_pred": 41,
+            "hi_pred": 1000000,
+            "q10": -0.377,
+            "q90": 0.144,
+            "rel": true,
+            "n": 63
+          }
+        ]
+      },
+      "count_method": "threshold",
+      "val_cv": {
+        "exist_recall": {
+          "pedestrian": 1.0,
+          "people": 0.99,
+          "bicycle": 0.926,
+          "car": 0.998,
+          "van": 0.962,
+          "truck": 0.793,
+          "tricycle": 0.911,
+          "awning-tricycle": 0.764,
+          "bus": 0.824,
+          "motor": 0.992
+        }
+      }
+    }
+  }
+}

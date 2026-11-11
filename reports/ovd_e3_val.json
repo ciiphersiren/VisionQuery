@@ -1,0 +1,280 @@
+{
+  "frames": 548,
+  "teacher": "sam3",
+  "tau": 0.5,
+  "imgsz": 1280,
+  "models": {
+    "zeroshot": "yoloe-26s-seg.pt",
+    "tuned": "weights/yoloe-26s-drone-ov.pt"
+  },
+  "groups": {
+    "visdrone": {
+      "reference": "human labels",
+      "instances": 38759,
+      "AP": {
+        "zeroshot": 11.58,
+        "tuned": 31.92
+      },
+      "AP_ci_seq": {
+        "zeroshot": [
+          10.37,
+          12.74
+        ]
+      },
+      "diff_vs_zeroshot": {
+        "tuned": {
+          "diff": 20.34,
+          "ci95_seq": [
+            18.8,
+            22.17
+          ]
+        }
+      },
+      "per_concept": {
+        "zeroshot": {
+          "person walking or standing": 12.28,
+          "person sitting or riding": 4.48,
+          "bicycle": 3.96,
+          "car": 39.44,
+          "van": 11.17,
+          "truck": 9.94,
+          "three-wheeled tricycle": 1.4,
+          "tricycle with a canopy": 0.39,
+          "bus": 23.5,
+          "motorcycle": 9.2
+        },
+        "tuned": {
+          "person walking or standing": 34.15,
+          "person sitting or riding": 21.58,
+          "bicycle": 16.09,
+          "car": 63.3,
+          "van": 35.24,
+          "truck": 32.56,
+          "three-wheeled tricycle": 23.78,
+          "tricycle with a canopy": 10.8,
+          "bus": 49.29,
+          "motorcycle": 32.38
+        }
+      }
+    },
+    "seen": {
+      "reference": "sam3 labels, score >= 0.5",
+      "instances": 39224,
+      "AP": {
+        "zeroshot": 4.05,
+        "tuned": 16.14
+      },
+      "AP_ci_seq": {
+        "zeroshot": [
+          3.67,
+          4.86
+        ]
+      },
+      "diff_vs_zeroshot": {
+        "tuned": {
+          "diff": 12.09,
+          "ci95_seq": [
+            10.7,
+            13.61
+          ]
+        }
+      },
+      "per_concept": {
+        "zeroshot": {
+          "tree": 1.09,
+          "building": 1.82,
+          "bush": 1.6,
+          "traffic light": 21.17,
+          "street lamp": 17.53,
+          "utility pole": 2.44,
+          "traffic sign": 26.68,
+          "road barrier": 0.79,
+          "crosswalk": 1.14,
+          "billboard": 11.46,
+          "tent": 4.43,
+          "market stall": 1.27,
+          "construction crane": 12.9,
+          "excavator": 2.61,
+          "scaffolding": 0.56,
+          "shipping container": 0.68,
+          "manhole cover": 10.54,
+          "solar panel": 0.01,
+          "swimming pool": 0.0,
+          "basketball court": 0.0,
+          "football field": 0.0,
+          "gate": 0.37,
+          "bridge": 0.16,
+          "table": 0.0,
+          "handcart": 0.99,
+          "baby stroller": 1.08,
+          "dog": 10.81,
+          "cow": 0.0,
+          "horse": 0.0,
+          "bird": 1.02,
+          "flag": 6.76,
+          "statue": 0.0,
+          "fountain": 0.0,
+          "stairs": 1.37,
+          "water tank": 0.36
+        },
+        "tuned": {
+          "tree": 52.1,
+          "building": 47.73,
+          "bush": 37.49,
+          "traffic light": 30.62,
+          "street lamp": 31.94,
+          "utility pole": 12.64,
+          "traffic sign": 35.12,
+          "road barrier": 24.69,
+          "crosswalk": 26.61,
+          "billboard": 35.2,
+          "tent": 16.18,
+          "market stall": 17.53,
+          "construction crane": 7.26,
+          "excavator": 15.41,
+          "scaffolding": 8.79,
+          "shipping container": 2.83,
+          "manhole cover": 45.1,
+          "solar panel": 27.4,
+          "swimming pool": 0.0,
+          "basketball court": 13.17,
+          "football field": 16.83,
+          "gate": 7.74,
+          "bridge": 4.45,
+          "table": 9.83,
+          "handcart": 0.39,
+          "baby stroller": 0.39,
+          "dog": 3.19,
+          "cow": 4.84,
+          "horse": 0.0,
+          "bird": 1.01,
+          "flag": 5.05,
+          "statue": 3.33,
+          "fountain": 0.0,
+          "stairs": 14.88,
+          "water tank": 5.18
+        }
+      },
+      "count_mae": {
+        "zeroshot": {
+          "0.05": 2.026,
+          "0.1": 2.01,
+          "0.15": 2.01,
+          "0.2": 2.013,
+          "0.25": 2.016,
+          "0.3": 2.02,
+          "0.35": 2.022,
+          "0.4": 2.024,
+          "0.45": 2.027,
+          "0.5": 2.029,
+          "0.55": 2.032,
+          "0.6": 2.034
+        },
+        "tuned": {
+          "0.05": 2.568,
+          "0.1": 1.364,
+          "0.15": 0.962,
+          "0.2": 0.827,
+          "0.25": 0.823,
+          "0.3": 0.881,
+          "0.35": 0.972,
+          "0.4": 1.071,
+          "0.45": 1.171,
+          "0.5": 1.271,
+          "0.55": 1.372,
+          "0.6": 1.465
+        }
+      }
+    },
+    "heldout": {
+      "reference": "sam3 labels, score >= 0.5",
+      "instances": 2993,
+      "AP": {
+        "zeroshot": 8.39,
+        "tuned": 0.0
+      },
+      "AP_ci_seq": {
+        "zeroshot": [
+          6.95,
+          10.74
+        ]
+      },
+      "diff_vs_zeroshot": {
+        "tuned": {
+          "diff": -8.39,
+          "ci95_seq": [
+            -10.74,
+            -6.95
+          ]
+        }
+      },
+      "per_concept": {
+        "zeroshot": {
+          "umbrella": 18.37,
+          "trash can": 16.04,
+          "bench": 3.3,
+          "potted plant": 13.78,
+          "traffic cone": 7.66,
+          "chair": 1.02,
+          "boat": 0.0,
+          "fire hydrant": 6.92
+        },
+        "tuned": {
+          "umbrella": 0.0,
+          "trash can": 0.0,
+          "bench": 0.0,
+          "potted plant": 0.0,
+          "traffic cone": 0.0,
+          "chair": 0.0,
+          "boat": 0.0,
+          "fire hydrant": 0.0
+        }
+      },
+      "count_mae": {
+        "zeroshot": {
+          "0.05": 0.914,
+          "0.1": 0.715,
+          "0.15": 0.664,
+          "0.2": 0.651,
+          "0.25": 0.647,
+          "0.3": 0.649,
+          "0.35": 0.65,
+          "0.4": 0.653,
+          "0.45": 0.656,
+          "0.5": 0.661,
+          "0.55": 0.664,
+          "0.6": 0.669
+        },
+        "tuned": {
+          "0.05": 0.683,
+          "0.1": 0.683,
+          "0.15": 0.683,
+          "0.2": 0.683,
+          "0.25": 0.683,
+          "0.3": 0.683,
+          "0.35": 0.683,
+          "0.4": 0.683,
+          "0.45": 0.683,
+          "0.5": 0.683,
+          "0.55": 0.683,
+          "0.6": 0.683
+        }
+      }
+    }
+  },
+  "app_threshold": {
+    "zeroshot": 0.1,
+    "tuned": 0.25
+  },
+  "app_threshold_heldout_mae": {
+    "zeroshot": 0.715,
+    "tuned": 0.683
+  },
+  "decision": {
+    "H1_visdrone_better": true,
+    "H2_seen_better": true,
+    "H3_open_vocab_preserved": false,
+    "H3_unseen_words_improve": false,
+    "adopt_in_app": false
+  }
+}

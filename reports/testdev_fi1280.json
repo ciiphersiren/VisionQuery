@@ -1,0 +1,260 @@
+{
+  "pipeline": "fi1280",
+  "AP": {
+    "AP": 26.91,
+    "AP50": 45.02,
+    "AP75": 27.28,
+    "AP_tiny": 9.77,
+    "AP_s": 16.47,
+    "AP_m": 38.47,
+    "AP_l": 51.08
+  },
+  "per_class_thr": {
+    "MAE": 1.6989,
+    "MAE_nz": 3.2433,
+    "exact_nz": 0.2154,
+    "rel_err": 0.5211,
+    "bias": 0.8344,
+    "exist_acc": 0.8481,
+    "exist_prec": 0.8789,
+    "exist_rec": 0.8021
+  },
+  "global_thr": {
+    "MAE": 1.7209,
+    "MAE_nz": 3.2969,
+    "exact_nz": 0.2152,
+    "rel_err": 0.5226,
+    "bias": 0.8295,
+    "exist_acc": 0.8471,
+    "exist_prec": 0.8811,
+    "exist_rec": 0.7972
+  },
+  "per_class_thr_with_exist_thr": {
+    "MAE": 1.6989,
+    "MAE_nz": 3.2433,
+    "exact_nz": 0.2154,
+    "rel_err": 0.5211,
+    "bias": 0.8344,
+    "exist_acc": 0.8448,
+    "exist_prec": 0.8147,
+    "exist_rec": 0.8866
+  },
+  "bootstrap_per_class_minus_global": {
+    "image_unit": [
+      -0.0219,
+      -0.0355,
+      -0.0086
+    ],
+    "sequence_unit": [
+      -0.0219,
+      -0.0528,
+      0.0187
+    ],
+    "n_images": 1610,
+    "n_sequences": 61
+  },
+  "per_class": [
+    {
+      "class": "pedestrian",
+      "gt_boxes": 21006,
+      "pred_boxes": 15823,
+      "MAE": 4.921,
+      "MAE_nz": 6.487,
+      "exact_nz": 0.124,
+      "rel_err": 0.517,
+      "bias": 0.753,
+      "exist_acc": 0.839,
+      "exist_prec": 0.846,
+      "exist_rec": 0.957
+    },
+    {
+      "class": "people",
+      "gt_boxes": 6376,
+      "pred_boxes": 3333,
+      "MAE": 2.434,
+      "MAE_nz": 4.764,
+      "exact_nz": 0.103,
+      "rel_err": 0.729,
+      "bias": 0.523,
+      "exist_acc": 0.768,
+      "exist_prec": 0.812,
+      "exist_rec": 0.693
+    },
+    {
+      "class": "bicycle",
+      "gt_boxes": 1302,
+      "pred_boxes": 593,
+      "MAE": 0.645,
+      "MAE_nz": 2.538,
+      "exact_nz": 0.141,
+      "rel_err": 0.77,
+      "bias": 0.455,
+      "exist_acc": 0.853,
+      "exist_prec": 0.668,
+      "exist_rec": 0.737
+    },
+    {
+      "class": "car",
+      "gt_boxes": 28074,
+      "pred_boxes": 27951,
+      "MAE": 2.806,
+      "MAE_nz": 2.943,
+      "exact_nz": 0.203,
+      "rel_err": 0.199,
+      "bias": 0.996,
+      "exist_acc": 0.98,
+      "exist_prec": 0.984,
+      "exist_rec": 0.995
+    },
+    {
+      "class": "van",
+      "gt_boxes": 5771,
+      "pred_boxes": 4429,
+      "MAE": 2.093,
+      "MAE_nz": 2.66,
+      "exact_nz": 0.179,
+      "rel_err": 0.664,
+      "bias": 0.767,
+      "exist_acc": 0.801,
+      "exist_prec": 0.849,
+      "exist_rec": 0.882
+    },
+    {
+      "class": "truck",
+      "gt_boxes": 2659,
+      "pred_boxes": 2795,
+      "MAE": 0.95,
+      "MAE_nz": 1.567,
+      "exact_nz": 0.352,
+      "rel_err": 0.549,
+      "bias": 1.051,
+      "exist_acc": 0.77,
+      "exist_prec": 0.7,
+      "exist_rec": 0.885
+    },
+    {
+      "class": "tricycle",
+      "gt_boxes": 530,
+      "pred_boxes": 598,
+      "MAE": 0.307,
+      "MAE_nz": 1.298,
+      "exact_nz": 0.29,
+      "rel_err": 0.69,
+      "bias": 1.128,
+      "exist_acc": 0.89,
+      "exist_prec": 0.602,
+      "exist_rec": 0.82
+    },
+    {
+      "class": "awning-tricycle",
+      "gt_boxes": 599,
+      "pred_boxes": 343,
+      "MAE": 0.289,
+      "MAE_nz": 1.644,
+      "exact_nz": 0.197,
+      "rel_err": 0.676,
+      "bias": 0.573,
+      "exist_acc": 0.878,
+      "exist_prec": 0.569,
+      "exist_rec": 0.639
+    },
+    {
+      "class": "bus",
+      "gt_boxes": 2940,
+      "pred_boxes": 2053,
+      "MAE": 0.808,
+      "MAE_nz": 1.44,
+      "exact_nz": 0.402,
+      "rel_err": 0.388,
+      "bias": 0.698,
+      "exist_acc": 0.893,
+      "exist_prec": 0.885,
+      "exist_rec": 0.913
+    },
+    {
+      "class": "motor",
+      "gt_boxes": 5845,
+      "pred_boxes": 4749,
+      "MAE": 1.735,
+      "MAE_nz": 3.154,
+      "exact_nz": 0.236,
+      "rel_err": 0.629,
+      "bias": 0.812,
+      "exist_acc": 0.778,
+      "exist_prec": 0.716,
+      "exist_rec": 0.909
+    }
+  ],
+  "existence_per_class": {
+    "pedestrian": {
+      "rec_count_thr": 0.835,
+      "rec_separate": 0.957,
+      "prec_count_thr": 0.929,
+      "prec_separate": 0.846,
+      "n_present": 1197
+    },
+    "people": {
+      "rec_count_thr": 0.529,
+      "rec_separate": 0.693,
+      "prec_count_thr": 0.879,
+      "prec_separate": 0.812,
+      "n_present": 797
+    },
+    "bicycle": {
+      "rec_count_thr": 0.52,
+      "rec_separate": 0.737,
+      "prec_count_thr": 0.803,
+      "prec_separate": 0.668,
+      "n_present": 377
+    },
+    "car": {
+      "rec_count_thr": 0.989,
+      "rec_separate": 0.995,
+      "prec_count_thr": 0.995,
+      "prec_separate": 0.984,
+      "n_present": 1530
+    },
+    "van": {
+      "rec_count_thr": 0.822,
+      "rec_separate": 0.882,
+      "prec_count_thr": 0.877,
+      "prec_separate": 0.849,
+      "n_present": 1168
+    },
+    "truck": {
+      "rec_count_thr": 0.864,
+      "rec_separate": 0.885,
+      "prec_count_thr": 0.726,
+      "prec_separate": 0.7,
+      "n_present": 750
+    },
+    "tricycle": {
+      "rec_count_thr": 0.657,
+      "rec_separate": 0.82,
+      "prec_count_thr": 0.671,
+      "prec_separate": 0.602,
+      "n_present": 245
+    },
+    "awning-tricycle": {
+      "rec_count_thr": 0.532,
+      "rec_separate": 0.639,
+      "prec_count_thr": 0.678,
+      "prec_separate": 0.569,
+      "n_present": 233
+    },
+    "bus": {
+      "rec_count_thr": 0.85,
+      "rec_separate": 0.913,
+      "prec_count_thr": 0.919,
+      "prec_separate": 0.885,
+      "n_present": 838
+    },
+    "motor": {
+      "rec_count_thr": 0.787,
+      "rec_separate": 0.909,
+      "prec_count_thr": 0.855,
+      "prec_separate": 0.716,
+      "n_present": 794
+    }
+  }
+}

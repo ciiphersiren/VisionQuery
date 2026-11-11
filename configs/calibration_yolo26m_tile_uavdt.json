@@ -1,0 +1,19 @@
+{
+ "version": "capstone-2026-11-09",
+ "pipelines": {
+  "fi1024": {
+   "count_thresholds": {
+    "car": 0.46,
+    "truck": 0.49,
+    "bus": 0.9
+   },
+   "exist_thresholds": {
+    "car": 0.46,
+    "truck": 0.49,
+    "bus": 0.9
+   },
+   "global_threshold": 0.49,
+   "source": "UAVDT val, 5 sequences. Bus threshold sits at the top of the grid: val had too few buses"
+  }
+ }
+}

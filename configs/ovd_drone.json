@@ -1,0 +1,9 @@
+{
+  "weights": "weights/yoloe-26s-drone-ov.pt",
+  "threshold": 0.25,
+  "adopt": false,
+  "source": "ovd_e3_val.json",
+  "teacher": "sam3",
+  "route_taught": true,
+  "note": "Pre-registered H3 failed (held-out words collapse), so adopt=false: the tuned model is used only for the 35 taught words (post-hoc routing decision); zero-shot YOLOE answers every other word."
+}

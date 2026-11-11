@@ -1,0 +1,471 @@
+{
+ "version": "capstone-2026-11-10",
+ "source": "results reported in the paper",
+ "detection": [
+  {
+   "model": "Ensemble",
+   "val_ap50": 0.682,
+   "ap50": 0.555,
+   "ap": 0.338,
+   "tiny": 0.361,
+   "small": 0.544,
+   "medium": 0.686,
+   "precision": 0.77,
+   "recall": 0.657,
+   "ms": 1031
+  },
+  {
+   "model": "YOLO26m-Tile",
+   "val_ap50": 0.667,
+   "ap50": 0.54,
+   "ap": 0.326,
+   "tiny": 0.345,
+   "small": 0.526,
+   "medium": 0.673,
+   "precision": 0.752,
+   "recall": 0.66,
+   "ms": 509
+  },
+  {
+   "model": "YOLOE-26m-FT",
+   "val_ap50": 0.651,
+   "ap50": 0.525,
+   "ap": 0.316,
+   "tiny": 0.334,
+   "small": 0.512,
+   "medium": 0.656,
+   "precision": 0.74,
+   "recall": 0.667,
+   "ms": 502
+  },
+  {
+   "model": "YOLO26s",
+   "val_ap50": 0.598,
+   "ap50": 0.482,
+   "ap": 0.289,
+   "tiny": 0.296,
+   "small": 0.473,
+   "medium": 0.613,
+   "precision": 0.723,
+   "recall": 0.618,
+   "ms": 285
+  },
+  {
+   "model": "YOLOE-26m-LP",
+   "val_ap50": 0.389,
+   "ap50": 0.269,
+   "ap": 0.148,
+   "tiny": 0.111,
+   "small": 0.251,
+   "medium": 0.416,
+   "precision": 0.642,
+   "recall": 0.434,
+   "ms": 505
+  },
+  {
+   "model": "YOLOE-26m-ZS",
+   "val_ap50": 0.276,
+   "ap50": 0.18,
+   "ap": 0.104,
+   "tiny": 0.06,
+   "small": 0.161,
+   "medium": 0.315,
+   "precision": 0.413,
+   "recall": 0.363,
+   "ms": 787
+  }
+ ],
+ "per_class": [
+  {
+   "cls": "pedestrian",
+   "objects": 21006,
+   "ap50": 0.603,
+   "val": 0.8
+  },
+  {
+   "cls": "people",
+   "objects": 6376,
+   "ap50": 0.432,
+   "val": 0.683
+  },
+  {
+   "cls": "bicycle",
+   "objects": 1302,
+   "ap50": 0.322,
+   "val": 0.552
+  },
+  {
+   "cls": "car",
+   "objects": 28074,
+   "ap50": 0.865,
+   "val": 0.922
+  },
+  {
+   "cls": "van",
+   "objects": 5771,
+   "ap50": 0.484,
+   "val": 0.612
+  },
+  {
+   "cls": "truck",
+   "objects": 2659,
+   "ap50": 0.628,
+   "val": 0.639
+  },
+  {
+   "cls": "tricycle",
+   "objects": 530,
+   "ap50": 0.423,
+   "val": 0.568
+  },
+  {
+   "cls": "awning-tricycle",
+   "objects": 599,
+   "ap50": 0.306,
+   "val": 0.305
+  },
+  {
+   "cls": "bus",
+   "objects": 2940,
+   "ap50": 0.721,
+   "val": 0.818
+  },
+  {
+   "cls": "motor",
+   "objects": 5845,
+   "ap50": 0.621,
+   "val": 0.768
+  }
+ ],
+ "transfer": [
+  {
+   "model": "YOLO26m-Tile (VisDrone)",
+   "visdrone": 0.752,
+   "uavdt": 0.429,
+   "carpk": 0.988
+  },
+  {
+   "model": "YOLO26s (VisDrone)",
+   "visdrone": 0.695,
+   "uavdt": 0.423,
+   "carpk": 0.987
+  },
+  {
+   "model": "YOLO26m-Tile (UAVDT)",
+   "visdrone": 0.32,
+   "uavdt": 0.362,
+   "carpk": 0.966
+  },
+  {
+   "model": "YOLO26s (UAVDT)",
+   "visdrone": 0.296,
+   "uavdt": 0.349,
+   "carpk": 0.906
+  }
+ ],
+ "uavdt": [
+  {
+   "model": "YOLO26m-Tile (UAVDT)",
+   "split": "val",
+   "precision": 0.84,
+   "recall": 0.818,
+   "ap50": 0.443,
+   "ap": 0.279
+  },
+  {
+   "model": "YOLO26m-Tile (UAVDT)",
+   "split": "test",
+   "precision": 0.786,
+   "recall": 0.713,
+   "ap50": 0.362,
+   "ap": 0.204
+  },
+  {
+   "model": "YOLO26s (UAVDT)",
+   "split": "val",
+   "precision": 0.837,
+   "recall": 0.81,
+   "ap50": 0.438,
+   "ap": 0.276
+  },
+  {
+   "model": "YOLO26s (UAVDT)",
+   "split": "test",
+   "precision": 0.771,
+   "recall": 0.67,
+   "ap50": 0.349,
+   "ap": 0.201
+  }
+ ],
+ "counting": [
+  {
+   "label": "VisDrone test-dev, VisDrone model",
+   "images": 1610,
+   "mean": 17.4,
+   "mae": 2.59,
+   "bias": 0.64
+  },
+  {
+   "label": "UAVDT test, UAVDT model",
+   "images": 1163,
+   "mean": 18.5,
+   "mae": 5.85,
+   "bias": 0.61
+  },
+  {
+   "label": "UAVDT test, VisDrone model",
+   "images": 1163,
+   "mean": 18.5,
+   "mae": 9.22,
+   "bias": 8.81
+  },
+  {
+   "label": "CARPK, VisDrone model",
+   "images": 1448,
+   "mean": 62.0,
+   "mae": 2.02,
+   "bias": 1.44
+  }
+ ],
+ "coverage": [
+  {
+   "label": "VisDrone (home data)",
+   "sequence": {
+    "coverage": 0.926,
+    "width": 7.7,
+    "videos": 0.82,
+    "infinite": false
+   },
+   "image": {
+    "coverage": 0.877,
+    "width": 5.2,
+    "videos": 0.377,
+    "infinite": false
+   }
+  },
+  {
+   "label": "UAVDT, its own model",
+   "sequence": {
+    "coverage": null,
+    "width": null,
+    "videos": 1.0,
+    "infinite": true
+   },
+   "image": {
+    "coverage": 0.758,
+    "width": 4.4,
+    "videos": 0.368,
+    "infinite": false
+   }
+  },
+  {
+   "label": "VisDrone model on UAVDT",
+   "sequence": {
+    "coverage": 0.85,
+    "width": 6.5,
+    "videos": 0.526,
+    "infinite": false
+   },
+   "image": {
+    "coverage": 0.696,
+    "width": 3.7,
+    "videos": 0.368,
+    "infinite": false
+   }
+  },
+  {
+   "label": "VisDrone model on CARPK",
+   "sequence": {
+    "coverage": 1.0,
+    "width": 22.1,
+    "videos": 1.0,
+    "infinite": false
+   },
+   "image": {
+    "coverage": 0.99,
+    "width": 14.5,
+    "videos": 1.0,
+    "infinite": false
+   }
+  }
+ ],
+ "classes": [
+  {
+   "cls": "car",
+   "sequence": {
+    "coverage": 0.96,
+    "width": 14.3,
+    "videos": 0.885,
+    "infinite": false
+   },
+   "image": {
+    "coverage": 0.888,
+    "width": 9.1,
+    "videos": 0.77,
+    "infinite": false
+   }
+  },
+  {
+   "cls": "pedestrian",
+   "sequence": {
+    "coverage": 0.889,
+    "width": 14.0,
+    "videos": 0.885,
+    "infinite": false
+   },
+   "image": {
+    "coverage": 0.78,
+    "width": 8.4,
+    "videos": 0.623,
+    "infinite": false
+   }
+  },
+  {
+   "cls": "people",
+   "sequence": {
+    "coverage": 0.857,
+    "width": 15.5,
+    "videos": 0.869,
+    "infinite": false
+   },
+   "image": {
+    "coverage": 0.737,
+    "width": 9.0,
+    "videos": 0.623,
+    "infinite": false
+   }
+  },
+  {
+   "cls": "motor",
+   "sequence": {
+    "coverage": 0.932,
+    "width": 6.0,
+    "videos": 0.787,
+    "infinite": false
+   },
+   "image": {
+    "coverage": 0.866,
+    "width": 3.7,
+    "videos": 0.475,
+    "infinite": false
+   }
+  },
+  {
+   "cls": "van",
+   "sequence": {
+    "coverage": 0.935,
+    "width": 8.2,
+    "videos": 0.967,
+    "infinite": false
+   },
+   "image": {
+    "coverage": 0.82,
+    "width": 4.8,
+    "videos": 0.738,
+    "infinite": false
+   }
+  },
+  {
+   "cls": "truck",
+   "sequence": {
+    "coverage": 0.943,
+    "width": 3.0,
+    "videos": 0.836,
+    "infinite": false
+   },
+   "image": {
+    "coverage": 0.881,
+    "width": 2.1,
+    "videos": 0.738,
+    "infinite": false
+   }
+  },
+  {
+   "cls": "bus",
+   "sequence": {
+    "coverage": 0.856,
+    "width": 1.4,
+    "videos": 0.836,
+    "infinite": false
+   },
+   "image": {
+    "coverage": 0.663,
+    "width": 0.1,
+    "videos": 0.639,
+    "infinite": false
+   }
+  },
+  {
+   "cls": "bicycle",
+   "sequence": {
+    "coverage": 0.975,
+    "width": 3.9,
+    "videos": 0.738,
+    "infinite": false
+   },
+   "image": {
+    "coverage": 0.935,
+    "width": 1.8,
+    "videos": 0.508,
+    "infinite": false
+   }
+  }
+ ],
+ "strata": [
+  {
+   "label": "1 to 8 objects",
+   "plain": 0.92,
+   "adjusted": 0.931
+  },
+  {
+   "label": "9 to 20",
+   "plain": 0.827,
+   "adjusted": 0.867
+  },
+  {
+   "label": "21 to 50",
+   "plain": 0.846,
+   "adjusted": 0.883
+  },
+  {
+   "label": "more than 50",
+   "plain": 0.649,
+   "adjusted": 0.735
+  },
+  {
+   "label": "small objects",
+   "plain": 0.737,
+   "adjusted": 0.793
+  },
+  {
+   "label": "large objects",
+   "plain": 0.962,
+   "adjusted": 0.963
+  }
+ ],
+ "baselines": {
+  "poisson": 0.939,
+  "poisson_width": 12.6,
+  "residual": 0.712,
+  "conformal_car": {
+   "coverage": 0.96,
+   "width": 14.3,
+   "videos": 0.885,
+   "infinite": false
+  }
+ },
+ "few_shot": [
+  {
+   "k": 10,
+   "uavdt": 0.687
+  },
+  {
+   "k": 25,
+   "uavdt": 0.677
+  },
+  {
+   "k": 50,
+   "uavdt": 0.724
+  }
+ ]
+}

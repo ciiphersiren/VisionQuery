@@ -1,0 +1,33 @@
+{
+ "version": "capstone-2026-11-09",
+ "pipelines": {
+  "sliced": {
+   "count_thresholds": {
+    "pedestrian": 0.39,
+    "people": 0.39,
+    "bicycle": 0.39,
+    "car": 0.39,
+    "van": 0.39,
+    "truck": 0.39,
+    "tricycle": 0.39,
+    "awning-tricycle": 0.39,
+    "bus": 0.39,
+    "motor": 0.39
+   },
+   "exist_thresholds": {
+    "pedestrian": 0.39,
+    "people": 0.39,
+    "bicycle": 0.39,
+    "car": 0.39,
+    "van": 0.39,
+    "truck": 0.39,
+    "tricycle": 0.39,
+    "awning-tricycle": 0.39,
+    "bus": 0.39,
+    "motor": 0.39
+   },
+   "global_threshold": 0.39,
+   "source": "VisDrone val: Ensemble best-F1 confidence 0.39, one value for all classes; not tuned for counting"
+  }
+ }
+}

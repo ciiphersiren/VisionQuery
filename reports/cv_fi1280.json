@@ -1,0 +1,623 @@
+{
+  "pipeline": "fi1280",
+  "images": 548,
+  "sequences": 76,
+  "A_per_class_thr": {
+    "MAE": 1.8285,
+    "MAE_nz": 2.5499,
+    "exact_nz": 0.2114,
+    "rel_err": 0.4466,
+    "bias": 0.9375,
+    "exist_acc": 0.8651,
+    "exist_prec": 0.9204,
+    "exist_rec": 0.8784
+  },
+  "global_thr": {
+    "MAE": 1.8967,
+    "MAE_nz": 2.6538,
+    "exact_nz": 0.2117,
+    "rel_err": 0.444,
+    "bias": 0.9424,
+    "exist_acc": 0.863,
+    "exist_prec": 0.9218,
+    "exist_rec": 0.8733
+  },
+  "B_expected_count": {
+    "MAE": 1.9089,
+    "MAE_nz": 2.637,
+    "exact_nz": 0.1831,
+    "rel_err": 0.5009,
+    "bias": 1.0009,
+    "exist_acc": 0.8728,
+    "exist_prec": 0.9138,
+    "exist_rec": 0.8984
+  },
+  "C_scaled_thr": {
+    "MAE": 1.9301,
+    "MAE_nz": 2.6685,
+    "exact_nz": 0.1911,
+    "rel_err": 0.5071,
+    "bias": 0.9965,
+    "exist_acc": 0.8651,
+    "exist_prec": 0.9204,
+    "exist_rec": 0.8784
+  },
+  "D_density_thr": {
+    "MAE": 1.8589,
+    "MAE_nz": 2.5956,
+    "exact_nz": 0.2064,
+    "rel_err": 0.4564,
+    "bias": 0.9479,
+    "exist_acc": 0.8615,
+    "exist_prec": 0.9221,
+    "exist_rec": 0.8706
+  },
+  "A_with_separate_existence": {
+    "MAE": 1.8285,
+    "MAE_nz": 2.5499,
+    "exact_nz": 0.2114,
+    "rel_err": 0.4466,
+    "bias": 0.9375,
+    "exist_acc": 0.8734,
+    "exist_prec": 0.8917,
+    "exist_rec": 0.927
+  },
+  "existence_decision": {
+    "weak_recall_count_thr": 0.7626,
+    "weak_recall_separate": 0.8661,
+    "pooled_prec_count_thr": 0.9204,
+    "pooled_prec_separate": 0.8917,
+    "adopt": true,
+    "per_class": {
+      "pedestrian": {
+        "rec_count_thr": 0.967,
+        "rec_separate": 0.998,
+        "prec_count_thr": 0.988,
+        "prec_separate": 0.981
+      },
+      "people": {
+        "rec_count_thr": 0.952,
+        "rec_separate": 0.99,
+        "prec_count_thr": 0.96,
+        "prec_separate": 0.952
+      },
+      "bicycle": {
+        "rec_count_thr": 0.714,
+        "rec_separate": 0.868,
+        "prec_count_thr": 0.897,
+        "prec_separate": 0.834
+      },
+      "car": {
+        "rec_count_thr": 0.996,
+        "rec_separate": 0.996,
+        "prec_count_thr": 0.996,
+        "prec_separate": 0.992
+      },
+      "van": {
+        "rec_count_thr": 0.936,
+        "rec_separate": 0.945,
+        "prec_count_thr": 0.895,
+        "prec_separate": 0.89
+      },
+      "truck": {
+        "rec_count_thr": 0.726,
+        "rec_separate": 0.778,
+        "prec_count_thr": 0.843,
+        "prec_separate": 0.802
+      },
+      "tricycle": {
+        "rec_count_thr": 0.843,
+        "rec_separate": 0.902,
+        "prec_count_thr": 0.821,
+        "prec_separate": 0.798
+      },
+      "awning-tricycle": {
+        "rec_count_thr": 0.541,
+        "rec_separate": 0.705,
+        "prec_count_thr": 0.654,
+        "prec_separate": 0.608
+      },
+      "bus": {
+        "rec_count_thr": 0.718,
+        "rec_separate": 0.771,
+        "prec_count_thr": 0.931,
+        "prec_separate": 0.863
+      },
+      "motor": {
+        "rec_count_thr": 0.963,
+        "rec_separate": 0.986,
+        "prec_count_thr": 0.973,
+        "prec_separate": 0.947
+      }
+    }
+  },
+  "count_decision": {
+    "best_candidate": "B",
+    "rel_change_vs_A": 0.044,
+    "bootstrap_seq_diff": [
+      0.0805,
+      0.0403,
+      0.1288
+    ],
+    "adopt": false
+  },
+  "round2_density_decision": {
+    "rel_change_vs_A": 0.0167,
+    "bootstrap_seq_diff": [
+      0.0305,
+      0.008,
+      0.0557
+    ],
+    "adopt": false,
+    "label": "exploratory",
+    "bucket_sizes": [
+      152,
+      310,
+      86
+    ]
+  },
+  "per_class_vs_global_val_seq_bootstrap": [
+    -0.0682,
+    -0.1173,
+    -0.0273
+  ],
+  "per_class_table_A": [
+    {
+      "class": "pedestrian",
+      "gt_boxes": 8844,
+      "pred_boxes": 8089,
+      "MAE": 3.79,
+      "MAE_nz": 3.973,
+      "exact_nz": 0.148,
+      "rel_err": 0.316,
+      "bias": 0.915,
+      "exist_acc": 0.98,
+      "exist_prec": 0.981,
+      "exist_rec": 0.998
+    },
+    {
+      "class": "people",
+      "gt_boxes": 5125,
+      "pred_boxes": 4741,
+      "MAE": 3.237,
+      "MAE_nz": 3.519,
+      "exact_nz": 0.139,
+      "rel_err": 0.556,
+      "bias": 0.925,
+      "exist_acc": 0.947,
+      "exist_prec": 0.952,
+      "exist_rec": 0.99
+    },
+    {
+      "class": "bicycle",
+      "gt_boxes": 1287,
+      "pred_boxes": 922,
+      "MAE": 1.389,
+      "MAE_nz": 1.978,
+      "exact_nz": 0.198,
+      "rel_err": 0.64,
+      "bias": 0.716,
+      "exist_acc": 0.797,
+      "exist_prec": 0.834,
+      "exist_rec": 0.868
+    },
+    {
+      "class": "car",
+      "gt_boxes": 14064,
+      "pred_boxes": 14232,
+      "MAE": 3.106,
+      "MAE_nz": 3.297,
+      "exact_nz": 0.167,
+      "rel_err": 0.16,
+      "bias": 1.012,
+      "exist_acc": 0.989,
+      "exist_prec": 0.992,
+      "exist_rec": 0.996
+    },
+    {
+      "class": "van",
+      "gt_boxes": 1975,
+      "pred_boxes": 1692,
+      "MAE": 1.692,
+      "MAE_nz": 2.017,
+      "exact_nz": 0.273,
+      "rel_err": 0.514,
+      "bias": 0.857,
+      "exist_acc": 0.869,
+      "exist_prec": 0.89,
+      "exist_rec": 0.945
+    },
+    {
+      "class": "truck",
+      "gt_boxes": 750,
+      "pred_boxes": 557,
+      "MAE": 0.659,
+      "MAE_nz": 1.199,
+      "exact_nz": 0.312,
+      "rel_err": 0.502,
+      "bias": 0.743,
+      "exist_acc": 0.799,
+      "exist_prec": 0.802,
+      "exist_rec": 0.778
+    },
+    {
+      "class": "tricycle",
+      "gt_boxes": 1045,
+      "pred_boxes": 950,
+      "MAE": 1.089,
+      "MAE_nz": 1.454,
+      "exact_nz": 0.27,
+      "rel_err": 0.569,
+      "bias": 0.909,
+      "exist_acc": 0.799,
+      "exist_prec": 0.798,
+      "exist_rec": 0.902
+    },
+    {
+      "class": "awning-tricycle",
+      "gt_boxes": 532,
+      "pred_boxes": 297,
+      "MAE": 0.881,
+      "MAE_nz": 1.786,
+      "exact_nz": 0.191,
+      "rel_err": 0.74,
+      "bias": 0.558,
+      "exist_acc": 0.699,
+      "exist_prec": 0.608,
+      "exist_rec": 0.705
+    },
+    {
+      "class": "bus",
+      "gt_boxes": 251,
+      "pred_boxes": 211,
+      "MAE": 0.197,
+      "MAE_nz": 0.771,
+      "exact_nz": 0.504,
+      "rel_err": 0.402,
+      "bias": 0.841,
+      "exist_acc": 0.916,
+      "exist_prec": 0.863,
+      "exist_rec": 0.771
+    },
+    {
+      "class": "motor",
+      "gt_boxes": 4886,
+      "pred_boxes": 4646,
+      "MAE": 2.245,
+      "MAE_nz": 2.489,
+      "exact_nz": 0.19,
+      "rel_err": 0.342,
+      "bias": 0.951,
+      "exist_acc": 0.938,
+      "exist_prec": 0.947,
+      "exist_rec": 0.986
+    }
+  ],
+  "fold_params": [
+    {
+      "count": [
+        0.225,
+        0.2,
+        0.2,
+        0.3,
+        0.225,
+        0.15,
+        0.2,
+        0.25,
+        0.1,
+        0.275
+      ],
+      "global": 0.25,
+      "exist": [
+        0.05,
+        0.05,
+        0.075,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05
+      ],
+      "density": [
+        [
+          0.225,
+          0.2,
+          0.325,
+          0.4,
+          0.45,
+          0.175,
+          0.15,
+          0.675,
+          0.075,
+          0.15
+        ],
+        [
+          0.2,
+          0.225,
+          0.2,
+          0.275,
+          0.225,
+          0.15,
+          0.3,
+          0.275,
+          0.15,
+          0.275
+        ],
+        [
+          0.225,
+          0.125,
+          0.175,
+          0.3,
+          0.325,
+          0.2,
+          0.175,
+          0.325,
+          0.075,
+          0.275
+        ]
+      ]
+    },
+    {
+      "count": [
+        0.225,
+        0.2,
+        0.2,
+        0.35,
+        0.225,
+        0.25,
+        0.2,
+        0.325,
+        0.35,
+        0.275
+      ],
+      "global": 0.25,
+      "exist": [
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.1,
+        0.1,
+        0.05,
+        0.05,
+        0.05
+      ],
+      "density": [
+        [
+          0.225,
+          0.2,
+          0.175,
+          0.4,
+          0.575,
+          0.375,
+          0.15,
+          0.475,
+          0.05,
+          0.2
+        ],
+        [
+          0.225,
+          0.225,
+          0.175,
+          0.35,
+          0.3,
+          0.1,
+          0.3,
+          0.275,
+          0.35,
+          0.275
+        ],
+        [
+          0.225,
+          0.15,
+          0.2,
+          0.275,
+          0.225,
+          0.2,
+          0.175,
+          0.325,
+          0.3,
+          0.275
+        ]
+      ]
+    },
+    {
+      "count": [
+        0.225,
+        0.175,
+        0.2,
+        0.3,
+        0.225,
+        0.2,
+        0.175,
+        0.25,
+        0.35,
+        0.275
+      ],
+      "global": 0.225,
+      "exist": [
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.15,
+        0.125,
+        0.075,
+        0.05,
+        0.05
+      ],
+      "density": [
+        [
+          0.225,
+          0.2,
+          0.175,
+          0.3,
+          0.45,
+          0.175,
+          0.15,
+          0.2,
+          0.075,
+          0.2
+        ],
+        [
+          0.2,
+          0.2,
+          0.15,
+          0.3,
+          0.225,
+          0.25,
+          0.2,
+          0.275,
+          0.35,
+          0.275
+        ],
+        [
+          0.225,
+          0.125,
+          0.225,
+          0.275,
+          0.225,
+          0.2,
+          0.175,
+          0.25,
+          0.35,
+          0.275
+        ]
+      ]
+    },
+    {
+      "count": [
+        0.225,
+        0.2,
+        0.2,
+        0.3,
+        0.225,
+        0.2,
+        0.2,
+        0.25,
+        0.35,
+        0.275
+      ],
+      "global": 0.25,
+      "exist": [
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.075,
+        0.05,
+        0.05,
+        0.05
+      ],
+      "density": [
+        [
+          0.225,
+          0.175,
+          0.175,
+          0.4,
+          0.125,
+          0.175,
+          0.15,
+          0.65,
+          0.075,
+          0.175
+        ],
+        [
+          0.2,
+          0.225,
+          0.175,
+          0.3,
+          0.3,
+          0.25,
+          0.2,
+          0.525,
+          0.15,
+          0.275
+        ],
+        [
+          0.225,
+          0.15,
+          0.225,
+          0.275,
+          0.225,
+          0.2,
+          0.175,
+          0.325,
+          0.3,
+          0.275
+        ]
+      ]
+    },
+    {
+      "count": [
+        0.2,
+        0.2,
+        0.175,
+        0.3,
+        0.2,
+        0.2,
+        0.3,
+        0.275,
+        0.35,
+        0.275
+      ],
+      "global": 0.225,
+      "exist": [
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.075,
+        0.2,
+        0.05,
+        0.05,
+        0.05
+      ],
+      "density": [
+        [
+          0.2,
+          0.225,
+          0.325,
+          0.35,
+          0.45,
+          0.175,
+          0.375,
+          0.4,
+          0.075,
+          0.2
+        ],
+        [
+          0.2,
+          0.225,
+          0.175,
+          0.3,
+          0.125,
+          0.225,
+          0.3,
+          0.1,
+          0.15,
+          0.275
+        ],
+        [
+          0.2,
+          0.175,
+          0.2,
+          0.275,
+          0.2,
+          0.15,
+          0.175,
+          0.25,
+          0.2,
+          0.225
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+ "default": "yolo26s_visdrone",
+ "models": {
+  "yolo26s_visdrone": {
+   "name": "YOLO26s (VisDrone)",
+   "weights": "weights/yolo26s_visdrone_sahi.pt",
+   "classes": [
+    "pedestrian",
+    "people",
+    "bicycle",
+    "car",
+    "van",
+    "truck",
+    "tricycle",
+    "awning-tricycle",
+    "bus",
+    "motor"
+   ],
+   "pipelines": [
+    "fi1280",
+    "fi1280+fi1920"
+   ],
+   "calibration": "configs/calibration.json",
+   "notes": "Per-class thresholds tuned on VisDrone validation. Fast on CPU."
+  },
+  "yolo26m_tile_visdrone": {
+   "name": "YOLO26m-Tile (VisDrone)",
+   "weights": "weights/yolo26m_tile_visdrone.pt",
+   "classes": [
+    "pedestrian",
+    "people",
+    "bicycle",
+    "car",
+    "van",
+    "truck",
+    "tricycle",
+    "awning-tricycle",
+    "bus",
+    "motor"
+   ],
+   "pipelines": [
+    "sliced"
+   ],
+   "calibration": "configs/calibration_yolo26m_tile_visdrone.json",
+   "notes": "Strongest single model (test-dev AP50 0.540). Counts carry 90% conformal ranges. Sliced: slow on CPU for a new photo."
+  },
+  "ensemble_visdrone": {
+   "name": "Ensemble: YOLO26m-Tile + YOLOE-26m-FT",
+   "weights": [
+    "weights/yolo26m_tile_visdrone.pt",
+    "weights/yoloe26m_e2_full.pt"
+   ],
+   "classes": [
+    "pedestrian",
+    "people",
+    "bicycle",
+    "car",
+    "van",
+    "truck",
+    "tricycle",
+    "awning-tricycle",
+    "bus",
+    "motor"
+   ],
+   "pipelines": [
+    "sliced"
+   ],
+   "calibration": "configs/calibration_ensemble_visdrone.json",
+   "notes": "Best AP (test-dev AP50 0.555), about twice the time. One threshold for all classes, not tuned for counting."
+  },
+  "yolo26m_tile_uavdt": {
+   "name": "YOLO26m-Tile (UAVDT)",
+   "weights": "weights/yolo26m_tile_uavdt.pt",
+   "trained_on": "UAVDT",
+   "classes": [
+    "car",
+    "truck",
+    "bus"
+   ],
+   "pipelines": [
+    "fi1024"
+   ],
+   "calibration": "configs/calibration_yolo26m_tile_uavdt.json",
+   "notes": "Car, truck and bus only. Selected at epoch 1 by the project's rule. Hardly ever counts buses."
+  },
+  "yolo26s_uavdt": {
+   "name": "YOLO26s (UAVDT)",
+   "weights": "weights/yolo26s_uavdt.pt",
+   "trained_on": "UAVDT",
+   "classes": [
+    "car",
+    "truck",
+    "bus"
+   ],
+   "pipelines": [
+    "fi1024"
+   ],
+   "calibration": "configs/calibration_yolo26s_uavdt.json",
+   "notes": "Car, truck and bus only. Selected at epoch 1 by the project's rule."
+  }
+ }
+}

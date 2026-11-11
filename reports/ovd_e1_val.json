@@ -1,0 +1,134 @@
+{
+  "split": "val",
+  "n_images": 548,
+  "n_sequences": 76,
+  "runs": {
+    "yolo26s-finetuned (FI1280)": {
+      "AP_all_sizes": {
+        "AP": 34.69,
+        "AP50": 55.2,
+        "AP75": 35.85,
+        "AP_tiny": 15.57,
+        "AP_s": 25.68,
+        "AP_m": 46.96,
+        "AP_l": 56.06
+      },
+      "per_class_AP": {
+        "pedestrian": 35.82,
+        "people": 24.22,
+        "bicycle": 18.2,
+        "car": 65.05,
+        "van": 38.15,
+        "truck": 35.99,
+        "tricycle": 27.37,
+        "awning-tricycle": 13.33,
+        "bus": 53.45,
+        "motor": 35.31
+      },
+      "AP_ci_seq": [
+        33.07,
+        36.63
+      ]
+    },
+    "yoloe-26s:names": {
+      "AP_all_sizes": {
+        "AP": 9.52,
+        "AP50": 14.65,
+        "AP75": 10.13,
+        "AP_tiny": 1.91,
+        "AP_s": 3.93,
+        "AP_m": 13.36,
+        "AP_l": 28.68
+      },
+      "per_class_AP": {
+        "pedestrian": 1.14,
+        "people": 2.57,
+        "bicycle": 3.91,
+        "car": 39.61,
+        "van": 11.19,
+        "truck": 10.02,
+        "tricycle": 2.06,
+        "awning-tricycle": 0.83,
+        "bus": 23.45,
+        "motor": 0.4
+      },
+      "AP_ci_seq": [
+        8.31,
+        10.7
+      ],
+      "AP_minus_finetuned_ci_seq": [
+        -26.76,
+        -23.77
+      ],
+      "fraction_of_finetuned_AP": 0.274
+    },
+    "yoloe-26s:described": {
+      "AP_all_sizes": {
+        "AP": 11.77,
+        "AP50": 20.14,
+        "AP75": 11.52,
+        "AP_tiny": 2.55,
+        "AP_s": 5.47,
+        "AP_m": 19.24,
+        "AP_l": 44.44
+      },
+      "per_class_AP": {
+        "pedestrian": 13.23,
+        "people": 4.82,
+        "bicycle": 4.02,
+        "car": 39.76,
+        "van": 11.22,
+        "truck": 10.0,
+        "tricycle": 1.44,
+        "awning-tricycle": 0.38,
+        "bus": 23.43,
+        "motor": 9.37
+      },
+      "AP_ci_seq": [
+        10.58,
+        12.96
+      ],
+      "AP_minus_finetuned_ci_seq": [
+        -24.87,
+        -21.57
+      ],
+      "fraction_of_finetuned_AP": 0.339,
+      "described_minus_names_ci_seq": [
+        1.89,
+        2.53
+      ]
+    }
+  },
+  "H1_best_zero_shot": {
+    "run": "yoloe-26s:described",
+    "AP": 11.77,
+    "fraction_of_finetuned": 0.339,
+    "H1_supported (< 0.5)": true
+  },
+  "app_threshold_choice": {
+    "chosen": 0.1,
+    "how": "Zero-shot YOLOE-26s with class-name prompts on val, all 10 VisDrone classes as a proxy for unseen ones; single threshold minimising counting MAE among {0.05, 0.0625 (median per-class optimum), 0.10, 0.30}.",
+    "val_counting": {
+      "0.05": {
+        "MAE": 5.545,
+        "bias": 0.624,
+        "exist_prec": 0.737,
+        "exist_rec": 0.602
+      },
+      "0.10": {
+        "MAE": 5.323,
+        "bias": 0.432,
+        "exist_prec": 0.749,
+        "exist_rec": 0.472
+      },
+      "0.30": {
+        "MAE": 5.668,
+        "bias": 0.236,
+        "exist_prec": 0.83,
+        "exist_rec": 0.352
+      }
+    },
+    "finetuned_reference_MAE": 1.829,
+    "label": "post-hoc engineering choice for the app, not a pre-registered claim"
+  }
+}

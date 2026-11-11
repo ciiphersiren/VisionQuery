@@ -1,0 +1,51 @@
+{
+ "version": "capstone-2026-11-09",
+ "pipelines": {
+  "sliced": {
+   "count_thresholds": {
+    "pedestrian": 0.36,
+    "people": 0.29,
+    "bicycle": 0.34,
+    "car": 0.46,
+    "van": 0.46,
+    "truck": 0.45,
+    "tricycle": 0.48,
+    "awning-tricycle": 0.48,
+    "bus": 0.41,
+    "motor": 0.44
+   },
+   "exist_thresholds": {
+    "pedestrian": 0.36,
+    "people": 0.29,
+    "bicycle": 0.34,
+    "car": 0.46,
+    "van": 0.46,
+    "truck": 0.45,
+    "tricycle": 0.48,
+    "awning-tricycle": 0.48,
+    "bus": 0.41,
+    "motor": 0.44
+   },
+   "global_threshold": 0.445,
+   "source": "VisDrone val; conformal q calibrated over val sequences",
+   "conformal": {
+    "target": 0.9,
+    "score": "|y - n| / sqrt(n + 1)",
+    "method": "sequence-grouped split conformal, per class, calibrated on VisDrone val",
+    "label": "90% range",
+    "q": {
+     "awning-tricycle": 3.0,
+     "bicycle": 3.0,
+     "bus": 0.9045,
+     "car": 1.8974,
+     "motor": 2.6943,
+     "pedestrian": 3.182,
+     "people": 3.0551,
+     "tricycle": 2.3094,
+     "truck": 1.5,
+     "van": 3.0
+    }
+   }
+  }
+ }
+}

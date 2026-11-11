@@ -1,0 +1,25 @@
+{
+  "name": "skyquery-ui",
+  "private": true,
+  "version": "0.3.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource/kalam": "^5.2.8",
+    "@fontsource/spectral": "^5.2.8",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.12",
+    "@types/react-dom": "19.1.9",
+    "@vitejs/plugin-react": "5.0.2",
+    "esbuild": "^0.25.10",
+    "typescript": "5.9.2",
+    "vite": "7.1.5"
+  }
+}
