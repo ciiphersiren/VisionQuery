@@ -19,17 +19,17 @@
 
 ---
 
-## ✨ What it does
+## What it does
 
 VisionQuery is a web app for **counting small objects in drone imagery** (cars, pedestrians, bicycles, buses and more) by asking
 questions in plain English, typed or spoken.
 
-- 🎯 **Every answer is counted from detector boxes.** The language side never sees the pixels and never invents a number; you see exactly which boxes were counted.
-- 📏 **Counts come with a calibrated range.** The strongest model attaches a 90% conformal interval, calibrated over whole drone videos rather than individual frames.
-- 🔍 **Built for tiny objects.** Detectors are trained on image tiles and run on enlarged image slices, because most objects in drone footage are only a few pixels across.
-- 🧭 **Understands regions and comparisons.** "left half", "top right corner", "more motorbikes than bicycles?", "any buses?"
-- 🌱 **Honest about what it doesn't know.** Words outside the detector's ten classes ("trees", "fire trucks") go to an open-vocabulary model, and those answers are marked as leads, not counts.
-- 🧪 **Pick your detector.** A model menu switches between detectors trained on VisDrone and on UAVDT.
+-  **Every answer is counted from detector boxes.** The language side never sees the pixels and never invents a number; you see exactly which boxes were counted.
+-  **Counts come with a calibrated range.** The strongest model attaches a 90% conformal interval, calibrated over whole drone videos rather than individual frames.
+-  **Built for tiny objects.** Detectors are trained on image tiles and run on enlarged image slices, because most objects in drone footage are only a few pixels across.
+-  **Understands regions and comparisons.** "left half", "top right corner", "more motorbikes than bicycles?", "any buses?"
+-  **Honest about what it doesn't know.** Words outside the detector's ten classes ("trees", "fire trucks") go to an open-vocabulary model, and those answers are marked as leads, not counts.
+-  **Pick your detector.** A model menu switches between detectors trained on VisDrone and on UAVDT.
 
 <table>
 <tr>
@@ -44,7 +44,7 @@ questions in plain English, typed or spoken.
 
 ---
 
-## 🧠 How it works
+## How it works
 
 <img src="docs/images/architecture.jpg" alt="VisionQuery architecture: offline training and calibration; online planner, detector and answer engine" width="100%">
 
@@ -79,7 +79,7 @@ Treating near-duplicate frames as independent makes the interval look more relia
 
 ---
 
-## 📊 Results at a glance
+## Results at a glance
 
 | | |
 |---|---|
@@ -92,7 +92,7 @@ Treating near-duplicate frames as independent makes the interval look more relia
 
 ---
 
-## 🤖 Models
+## Models
 
 All weights are in [`weights/`](weights/). Pick one from the **Model** menu in the app.
 
@@ -111,7 +111,7 @@ VisDrone classes: pedestrian, people, bicycle, car, van, truck, tricycle, awning
 
 ---
 
-## 🚀 Run it locally
+## Run it locally
 
 Requires Python 3.10+.
 
@@ -130,7 +130,7 @@ visionquery ask samples/0000330_00801_d_0000804.jpg "how many cars are in the le
 
 The first question about a word outside the ten classes downloads the zero-shot YOLOE model and its text encoder (about 270 MB) from Ultralytics.
 
-## 🐳 Run it with Docker
+## Run it with Docker
 
 ```bash
 docker build -t visionquery .
@@ -147,7 +147,7 @@ Every key in [`configs/default.yaml`](configs/default.yaml) can be overridden wi
 For the optional language-model planner, set `HF_TOKEN` (Hugging Face router) or `SKYQUERY_LLM_API_KEY` with `SKYQUERY_LLM_BASE_URL` for any OpenAI-compatible API. Without a key, the rule-based planner answers everything it recognizes.
 </details>
 
-## 🛠️ Develop
+## Develop
 
 ```bash
 pip install -e ".[sliced,eval,dev]"
@@ -159,7 +159,7 @@ npm run build                                # writes frontend/dist, which the s
 
 ---
 
-## 📁 Project structure
+## Project structure
 
 ```
 VisionQuery/
@@ -180,7 +180,7 @@ VisionQuery/
 
 ---
 
-## 👥 Team
+## Team
 
 Built as a final-year capstone project at the **School of Computer Science and Engineering (SCOPE), VIT-AP University**.
 
@@ -189,13 +189,13 @@ Supervised by **Dr. Tauseef Khan**
 
 A paper describing the framework and its evaluation is in preparation.
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 - Datasets: [VisDrone2019-DET](https://github.com/VisDrone/VisDrone-Dataset), [UAVDT](https://sites.google.com/view/grli-uavdt/), [CARPK](https://lafi.github.io/LPN/). The three sample frames are from VisDrone and are included for demonstration only.
 - Detectors: [Ultralytics YOLO26 and YOLOE](https://github.com/ultralytics/ultralytics). Slicing utilities: [SAHI](https://github.com/obss/sahi). Box fusion: [ensemble-boxes](https://github.com/ZFTurbo/Weighted-Boxes-Fusion).
 - Open-vocabulary teacher labels: SAM 3.
 
-## 📄 License
+## License
 
 [GNU AGPL-3.0](LICENSE), matching Ultralytics. If you run a modified version as a public service, you must publish its source.
 The model weights were trained on VisDrone and UAVDT, which are licensed for academic, non-commercial use, so use them for research and education only.
