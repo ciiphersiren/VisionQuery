@@ -6,30 +6,39 @@
 
 *"How many cars are in the left half?" → **"I count 27 cars in the left half (likely 22–31)"**, with every counted box drawn on the image.*
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](#-run-it-locally)
-[![FastAPI](https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white)](#-project-structure)
-[![React](https://img.shields.io/badge/UI-React%2019-61DAFB?logo=react&logoColor=black)](#-project-structure)
-[![YOLO26](https://img.shields.io/badge/Detector-YOLO26-111F68)](#-models)
-[![Docker](https://img.shields.io/badge/Docker-ready-2496ED?logo=docker&logoColor=white)](#-run-it-with-docker)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](#run-it-locally)
+[![FastAPI](https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white)](#project-structure)
+[![React](https://img.shields.io/badge/UI-React%2019-61DAFB?logo=react&logoColor=black)](#project-structure)
+[![YOLO26](https://img.shields.io/badge/Detector-YOLO26-111F68)](#models)
+[![Docker](https://img.shields.io/badge/Docker-ready-2496ED?logo=docker&logoColor=white)](#run-it-with-docker)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](LICENSE)
 
 <img src="docs/images/demo_count.jpg" alt="VisionQuery counting cars in the left half of a VisDrone frame, with boxes and a likely range" width="92%">
+
+**[What it does](#what-it-does) · [How it works](#how-it-works) · [Results](#results-at-a-glance) · [Models](#models) · [Run it](#run-it-locally) · [Team](#team)**
 
 </div>
 
 ---
 
-## ✨ What it does
+## Why it matters
 
-VisionQuery is a web app for **counting small objects in drone imagery** (cars, pedestrians, bicycles, buses and more) by asking
+Drones photograph traffic, crowds, parking lots and disaster sites from 50 to 200 m up, where a car is a few dozen pixels and a
+pedestrian a handful. General-purpose detectors and vision-language models miss most of these objects, and a bare number with no
+evidence is hard to trust. VisionQuery answers in plain language, shows every box it counted, and says how far off the count
+could be.
+
+## What it does
+
+VisionQuery is a web application for **counting small objects in drone imagery** (cars, pedestrians, bicycles, buses and more) by asking
 questions in plain English, typed or spoken.
 
-- 🎯 **Every answer is counted from detector boxes.** The language side never sees the pixels and never invents a number; you see exactly which boxes were counted.
-- 📏 **Counts come with a calibrated range.** The strongest model attaches a 90% conformal interval, calibrated over whole drone videos rather than individual frames.
-- 🔍 **Built for tiny objects.** Detectors are trained on image tiles and run on enlarged image slices, because most objects in drone footage are only a few pixels across.
-- 🧭 **Understands regions and comparisons.** "left half", "top right corner", "more motorbikes than bicycles?", "any buses?"
-- 🌱 **Honest about what it doesn't know.** Words outside the detector's ten classes ("trees", "fire trucks") go to an open-vocabulary model, and those answers are marked as leads, not counts.
-- 🧪 **Pick your detector.** A model menu switches between detectors trained on VisDrone and on UAVDT.
+-  **Every answer is counted from detector boxes.** The language side never sees the pixels and never invents a number; you see exactly which boxes were counted.
+-  **Counts come with a calibrated range.** The strongest model attaches a 90% conformal interval, calibrated over whole drone videos rather than individual frames.
+-  **Built for tiny objects.** Detectors are trained on image tiles and run on enlarged image slices, because most objects in drone footage are only a few pixels across.
+-  **Understands regions and comparisons.** "left half", "top right corner", "more motorbikes than bicycles?", "any buses?"
+-  **Honest about what it doesn't know.** Words outside the detector's ten classes ("trees", "fire trucks") go to an open-vocabulary model, and those answers are marked as leads, not counts.
+-  **Pick your detector.** A model menu switches between detectors trained on VisDrone and on UAVDT.
 
 <table>
 <tr>
@@ -44,7 +53,22 @@ questions in plain English, typed or spoken.
 
 ---
 
-## 🧠 How it works
+### Try these questions
+
+| Type | Example |
+|---|---|
+| Count | *"how many cars are in the left half?"* |
+| Exists | *"are there any buses?"* |
+| Compare | *"are there more motorbikes than bicycles?"* |
+| Locate | *"where are the trucks?"* |
+| Summary | *"describe this image"* |
+| Outside the ten classes | *"how many trees?"* (answered by the open-vocabulary model and marked as unverified) |
+
+Questions can also be asked by voice with the microphone button, and answers can be read aloud. Both use the browser's built-in speech features (dictation works in Chrome, Edge and Safari).
+
+---
+
+## How it works
 
 <img src="docs/images/architecture.jpg" alt="VisionQuery architecture: offline training and calibration; online planner, detector and answer engine" width="100%">
 
@@ -79,7 +103,7 @@ Treating near-duplicate frames as independent makes the interval look more relia
 
 ---
 
-## 📊 Results at a glance
+## Results at a glance
 
 | | |
 |---|---|
@@ -92,7 +116,7 @@ Treating near-duplicate frames as independent makes the interval look more relia
 
 ---
 
-## 🤖 Models
+## Models
 
 All weights are in [`weights/`](weights/). Pick one from the **Model** menu in the app.
 
@@ -111,12 +135,12 @@ VisDrone classes: pedestrian, people, bicycle, car, van, truck, tricycle, awning
 
 ---
 
-## 🚀 Run it locally
+## Run it locally
 
 Requires Python 3.10+.
 
 ```bash
-git clone https://github.com/<your-username>/VisionQuery.git
+git clone https://github.com/ciiphersiren/VisionQuery.git
 cd VisionQuery
 pip install -e ".[sliced]"
 visionquery serve            # then open http://127.0.0.1:8000
@@ -130,14 +154,12 @@ visionquery ask samples/0000330_00801_d_0000804.jpg "how many cars are in the le
 
 The first question about a word outside the ten classes downloads the zero-shot YOLOE model and its text encoder (about 270 MB) from Ultralytics.
 
-## 🐳 Run it with Docker
+## Run it with Docker
 
 ```bash
 docker build -t visionquery .
 docker run -p 7860:7860 visionquery     # then open http://localhost:7860
 ```
-
-The same image runs as a [Hugging Face Docker Space](https://huggingface.co/docs/hub/spaces-sdks-docker); [`deploy/huggingface/README.md`](deploy/huggingface/README.md) is the Space's config card.
 
 <details>
 <summary><b>Optional settings</b></summary>
@@ -147,7 +169,7 @@ Every key in [`configs/default.yaml`](configs/default.yaml) can be overridden wi
 For the optional language-model planner, set `HF_TOKEN` (Hugging Face router) or `SKYQUERY_LLM_API_KEY` with `SKYQUERY_LLM_BASE_URL` for any OpenAI-compatible API. Without a key, the rule-based planner answers everything it recognizes.
 </details>
 
-## 🛠️ Develop
+## Develop
 
 ```bash
 pip install -e ".[sliced,eval,dev]"
@@ -159,7 +181,20 @@ npm run build                                # writes frontend/dist, which the s
 
 ---
 
-## 📁 Project structure
+## Tech stack
+
+| Layer | Tools |
+|---|---|
+| Detection | Ultralytics YOLO26 and YOLOE, PyTorch, SAHI slicing, weighted box fusion |
+| Training | Kaggle notebooks on 2× NVIDIA T4 GPUs |
+| Calibration | Split conformal prediction over whole videos, per-class confidence thresholds |
+| Backend | Python, FastAPI, Uvicorn, Pydantic |
+| Frontend | React 19, TypeScript, Vite, browser speech recognition and speech synthesis |
+| Packaging | Python package with a `visionquery` command, Docker (CPU image) |
+
+---
+
+## Project structure
 
 ```
 VisionQuery/
@@ -174,28 +209,33 @@ VisionQuery/
 ├── reports/             evaluation summaries shown on the app's "How it works" page
 ├── samples/             three VisDrone frames to try
 ├── tests/               unit tests
-├── deploy/huggingface/  Space config card
 └── Dockerfile
 ```
 
 ---
 
-## 👥 Team
+## Team
 
 Built as a final-year capstone project at the **School of Computer Science and Engineering (SCOPE), VIT-AP University**.
 
-**Reet Mishra · Chinmayi Ajay Rajani · Isha Syed · Arsheen Aftab Inamdar**
-Supervised by **Dr. Tauseef Khan**
+| Name | Registration No. |
+|---|---|
+| Reet Mishra | 23BCE8992 |
+| Chinmayi Ajay Rajani | 23BCE7222 |
+| Isha Syed | 23BCE9003 |
+| Arsheen Aftab Inamdar | 23BCE8532 |
+
+Supervised by **Dr. Tauseef Khan**, SCOPE, VIT-AP University.
 
 A paper describing the framework and its evaluation is in preparation.
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 - Datasets: [VisDrone2019-DET](https://github.com/VisDrone/VisDrone-Dataset), [UAVDT](https://sites.google.com/view/grli-uavdt/), [CARPK](https://lafi.github.io/LPN/). The three sample frames are from VisDrone and are included for demonstration only.
 - Detectors: [Ultralytics YOLO26 and YOLOE](https://github.com/ultralytics/ultralytics). Slicing utilities: [SAHI](https://github.com/obss/sahi). Box fusion: [ensemble-boxes](https://github.com/ZFTurbo/Weighted-Boxes-Fusion).
 - Open-vocabulary teacher labels: SAM 3.
 
-## 📄 License
+## License
 
 [GNU AGPL-3.0](LICENSE), matching Ultralytics. If you run a modified version as a public service, you must publish its source.
 The model weights were trained on VisDrone and UAVDT, which are licensed for academic, non-commercial use, so use them for research and education only.
