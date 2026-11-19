@@ -1049,6 +1049,7 @@ input[type="range"].is-calibrated::-moz-range-thumb {
 /* ------------------------------------------------------------------ record (metrics) */
 .record {
   max-width: 880px;
+  margin: 0 auto;
   padding: 10px 0 60px;
 }
 .record-intro h1 {

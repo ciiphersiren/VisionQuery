@@ -188,8 +188,8 @@ export function Guide({ g, methods, testdev, existence, zeroshot, taught }: Slot
       <section className="record-block">
         <h2>Limits</h2>
         <ul className="record-lede">
-          <li>Every model is a single training run.</li>
-          <li>The question planner itself has not been tested on a set of real questions yet.</li>
+          <li>YOLO26m-Tile (VisDrone) was trained three times with different seeds and varies little (test-dev AP50 0.541 ± 0.002); every other model is a single training run.</li>
+          <li>The question planner and the full answers have not been tested with users yet.</li>
           <li>UAVDT models rarely count buses: their bus threshold had to be set very high because the validation videos had few buses.</li>
           <li>The YOLO26s counting and "is there" results were measured with whole-image inference at 1280 px, so its detection score there differs from the sliced score in the model tables.</li>
           <li>The open-vocabulary answers are not calibrated for drone footage.</li>
