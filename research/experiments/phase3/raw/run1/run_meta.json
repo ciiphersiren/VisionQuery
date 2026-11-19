@@ -1,0 +1,20 @@
+{
+ "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+ "max_pixels": 1500000,
+ "quant": "4-bit nf4",
+ "n_gpu": 2,
+ "time_box_h": 2.5,
+ "wall_hours": 2.20588122997019,
+ "queries_planned": 346,
+ "queries_done": 346,
+ "max_tokens": {
+  "B": 16,
+  "D": 16,
+  "C": 1024
+ },
+ "vd_conf": 0.41,
+ "uv_conf": 0.44,
+ "smoke": false,
+ "python": "3.13.16",
+ "torch": "2.11.0+cu130"
+}

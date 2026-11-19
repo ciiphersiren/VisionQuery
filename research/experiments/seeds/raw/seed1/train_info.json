@@ -1,0 +1,14 @@
+{
+ "seed": 1,
+ "smoke": false,
+ "epochs_trained": 11,
+ "best_epoch_ultralytics": 8,
+ "time_h": 10.5,
+ "optimizer": {
+  "optimizer": "MuSGD",
+  "lr0": 0.01,
+  "momentum": 0.9,
+  "warmup_bias_lr": 0.0
+ },
+ "ultralytics": "8.4.174"
+}

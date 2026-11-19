@@ -1,0 +1,20 @@
+{
+ "dronekit": "0.1.0",
+ "torch": "2.11.0+cu130",
+ "python": "3.13.16",
+ "ultralytics": "8.4.174",
+ "n_gpu": 2,
+ "smoke": false,
+ "val_seqs": [
+  "M0201",
+  "M0402",
+  "M0604",
+  "M0902",
+  "M1006"
+ ],
+ "strides": {
+  "val": 10,
+  "test": 10
+ },
+ "min_gain": 0.005
+}

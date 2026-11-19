@@ -1,0 +1,2 @@
+n_left_out,share_over_50,median_true_count,datasets,detector_MAE,B_answered,B_MAE,boxes_listed_median,boxes_listed_median_others
+30,1.0,84.5,visdrone:23;carpk:7,10.333333333333334,30,30.433333333333334,90.5,19.0

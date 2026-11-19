@@ -1,0 +1,69 @@
+{
+  "dronekit": "0.1.0",
+  "torch": "2.11.0+cu128",
+  "python": "3.13.15",
+  "gpu": "Tesla T4",
+  "settings": {
+    "conf": 0.01,
+    "max_det": 1000,
+    "overlap": 0.25,
+    "setups": {
+      "whole1536": {
+        "passes": [
+          "full@1536"
+        ],
+        "method": null
+      },
+      "best_sliced": {
+        "passes": [
+          "s512@1280",
+          "full@1536"
+        ],
+        "method": "NMS",
+        "metric": "IOU",
+        "thr": 0.6,
+        "edge": true
+      },
+      "fast": {
+        "passes": [
+          "s512@1024",
+          "full@1536"
+        ],
+        "method": "NMS",
+        "metric": "IOU",
+        "thr": 0.6,
+        "edge": true
+      }
+    },
+    "ensemble_wbf": 0.65,
+    "max_dets": [
+      1,
+      100,
+      500
+    ],
+    "areas": {
+      "all": [
+        0,
+        10000000000.0
+      ],
+      "tiny": [
+        0,
+        256
+      ],
+      "small": [
+        256,
+        1024
+      ],
+      "coco_small": [
+        0,
+        1024
+      ],
+      "medium+": [
+        1024,
+        10000000000.0
+      ]
+    }
+  },
+  "ultralytics": "8.4.174",
+  "sahi": "0.12.8"
+}

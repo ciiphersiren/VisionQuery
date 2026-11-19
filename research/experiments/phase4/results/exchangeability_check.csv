@@ -1,0 +1,2 @@
+q,pooled_coverage,share_at_target,paper_coverage,paper_share_at_target,n_cal_sequences,rank,n_test_sequences,at_target,expected_share,p_as_few_under_exchangeability
+2.1213203435596424,0.9264822134387352,0.819672131147541,0.9264822134387352,0.819672131147541,75,69,61,50,0.9078947368421053,0.06717670429730757

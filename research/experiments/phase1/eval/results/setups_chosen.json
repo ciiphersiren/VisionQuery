@@ -1,0 +1,15 @@
+{
+ "rule": "sliced only if AP gain >= 0.005 on UAVDT val",
+ "chosen": {
+  "tile_uv": "whole",
+  "s_uv": "whole"
+ },
+ "setup_of": {
+  "tile_vd": "best_sliced",
+  "s_vd": "best_sliced",
+  "tile_uv": "whole",
+  "s_uv": "whole",
+  "tile_uv_last": "whole",
+  "s_uv_last": "whole"
+ }
+}

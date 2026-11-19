@@ -1,0 +1,7 @@
+model,carpk/test,carpk/train,uavdt/test,visdrone/test-dev
+YOLO26m-Tile (UAVDT),0.966,0.976,0.362,0.32
+"YOLO26m-Tile (UAVDT), last epoch",0.935,,0.289,0.245
+YOLO26m-Tile (VisDrone),0.988,0.988,0.429,0.752
+YOLO26s (UAVDT),0.906,0.968,0.349,0.296
+"YOLO26s (UAVDT), last epoch",0.846,,0.26,0.183
+YOLO26s (VisDrone),0.987,0.988,0.423,0.695

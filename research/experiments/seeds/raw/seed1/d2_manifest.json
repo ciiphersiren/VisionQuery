@@ -1,0 +1,13 @@
+{
+ "seed": 1,
+ "full": 6471,
+ "tiles": 63745,
+ "tile_sizes": [
+  640,
+  960
+ ],
+ "overlap": 0.25,
+ "min_vis": 0.6,
+ "empty_keep": 0.1,
+ "grey": 114
+}

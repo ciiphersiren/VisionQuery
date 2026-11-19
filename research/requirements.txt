@@ -1,0 +1,16 @@
+# Research code (dronekit, tools, tests). The GPU notebooks install their own pinned versions on Kaggle.
+ultralytics==8.4.174
+sahi==0.12.8
+ensemble-boxes
+pycocotools
+numpy
+pandas
+pyarrow
+scipy
+matplotlib
+pillow
+pyyaml
+pytest
+# Phase 3 notebook only (VLM baseline, GPU)
+# transformers>=4.45
+# qwen-vl-utils

@@ -1,0 +1,48 @@
+{
+ "smoke": false,
+ "epochs_scored": 38,
+ "n_val_frames": 414,
+ "inference": "full@1024",
+ "ultralytics": "8.4.174",
+ "best_pt_matches_results_epochs": [
+  1
+ ],
+ "checkpoints_with_mismatched_metrics": [],
+ "peak_epoch": {
+  "validator": 1,
+  "noignore": 1,
+  "eval_v2": 1,
+  "car": 6,
+  "truck": 2,
+  "bus": 1
+ },
+ "peak_value": {
+  "validator": 0.34783,
+  "noignore": 0.3001049696467596,
+  "eval_v2": 0.30608059892651374
+ },
+ "last_epoch_value": {
+  "validator": 0.28757,
+  "noignore": 0.25328288275611904,
+  "eval_v2": 0.26030918467263164
+ },
+ "corr_with_validator": {
+  "noignore": 0.9130244089181957,
+  "eval_v2": 0.9110646794354463
+ },
+ "largest_adjacent_change": {
+  "validator": 0.07995999999999998,
+  "eval_v2": 0.07902268745566737,
+  "car": 0.02343105819100466,
+  "truck": 0.10775568873344184,
+  "bus": 0.18403223816723374
+ },
+ "top5_eval_v2_epochs": [
+  1,
+  10,
+  8,
+  4,
+  22
+ ],
+ "eval_v2_peaks_early": true
+}

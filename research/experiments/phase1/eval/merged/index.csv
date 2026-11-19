@@ -1,0 +1,31 @@
+tag,model,classes,dataset,split,setup,n_images
+tile_vd,YOLO26m-Tile (VisDrone),"pedestrian,people,bicycle,car,van,truck,tricycle,awning-tricycle,bus,motor",uavdt,val,best_sliced,367
+tile_vd,YOLO26m-Tile (VisDrone),"pedestrian,people,bicycle,car,van,truck,tricycle,awning-tricycle,bus,motor",uavdt,test,best_sliced,1665
+tile_vd,YOLO26m-Tile (VisDrone),"pedestrian,people,bicycle,car,van,truck,tricycle,awning-tricycle,bus,motor",carpk,test,best_sliced,459
+tile_vd,YOLO26m-Tile (VisDrone),"pedestrian,people,bicycle,car,van,truck,tricycle,awning-tricycle,bus,motor",carpk,train,best_sliced,989
+tile_vd,YOLO26m-Tile (VisDrone),"pedestrian,people,bicycle,car,van,truck,tricycle,awning-tricycle,bus,motor",visdrone,val,best_sliced,548
+tile_vd,YOLO26m-Tile (VisDrone),"pedestrian,people,bicycle,car,van,truck,tricycle,awning-tricycle,bus,motor",visdrone,test-dev,best_sliced,1610
+s_vd,YOLO26s (VisDrone),"pedestrian,people,bicycle,car,van,truck,tricycle,awning-tricycle,bus,motor",uavdt,val,best_sliced,367
+s_vd,YOLO26s (VisDrone),"pedestrian,people,bicycle,car,van,truck,tricycle,awning-tricycle,bus,motor",uavdt,test,best_sliced,1665
+s_vd,YOLO26s (VisDrone),"pedestrian,people,bicycle,car,van,truck,tricycle,awning-tricycle,bus,motor",carpk,test,best_sliced,459
+s_vd,YOLO26s (VisDrone),"pedestrian,people,bicycle,car,van,truck,tricycle,awning-tricycle,bus,motor",carpk,train,best_sliced,989
+s_vd,YOLO26s (VisDrone),"pedestrian,people,bicycle,car,van,truck,tricycle,awning-tricycle,bus,motor",visdrone,val,best_sliced,548
+s_vd,YOLO26s (VisDrone),"pedestrian,people,bicycle,car,van,truck,tricycle,awning-tricycle,bus,motor",visdrone,test-dev,best_sliced,1610
+tile_uv,YOLO26m-Tile (UAVDT),"car,truck,bus",uavdt,val,whole,367
+tile_uv,YOLO26m-Tile (UAVDT),"car,truck,bus",uavdt,test,whole,1665
+tile_uv,YOLO26m-Tile (UAVDT),"car,truck,bus",carpk,test,whole,459
+tile_uv,YOLO26m-Tile (UAVDT),"car,truck,bus",carpk,train,whole,989
+tile_uv,YOLO26m-Tile (UAVDT),"car,truck,bus",visdrone,test-dev,whole,1610
+s_uv,YOLO26s (UAVDT),"car,truck,bus",uavdt,val,whole,367
+s_uv,YOLO26s (UAVDT),"car,truck,bus",uavdt,test,whole,1665
+s_uv,YOLO26s (UAVDT),"car,truck,bus",carpk,test,whole,459
+s_uv,YOLO26s (UAVDT),"car,truck,bus",carpk,train,whole,989
+s_uv,YOLO26s (UAVDT),"car,truck,bus",visdrone,test-dev,whole,1610
+tile_uv_last,"YOLO26m-Tile (UAVDT), last epoch","car,truck,bus",uavdt,val,whole,367
+tile_uv_last,"YOLO26m-Tile (UAVDT), last epoch","car,truck,bus",uavdt,test,whole,1665
+tile_uv_last,"YOLO26m-Tile (UAVDT), last epoch","car,truck,bus",carpk,test,whole,459
+tile_uv_last,"YOLO26m-Tile (UAVDT), last epoch","car,truck,bus",visdrone,test-dev,whole,1610
+s_uv_last,"YOLO26s (UAVDT), last epoch","car,truck,bus",uavdt,val,whole,367
+s_uv_last,"YOLO26s (UAVDT), last epoch","car,truck,bus",uavdt,test,whole,1665
+s_uv_last,"YOLO26s (UAVDT), last epoch","car,truck,bus",carpk,test,whole,459
+s_uv_last,"YOLO26s (UAVDT), last epoch","car,truck,bus",visdrone,test-dev,whole,1610

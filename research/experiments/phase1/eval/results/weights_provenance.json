@@ -1,0 +1,44 @@
+{
+ "tile_vd": {
+  "file": "yolo26m_tile_visdrone.pt",
+  "name": "YOLO26m-Tile (VisDrone)",
+  "params": 21788308,
+  "saved": "2026-09-30T06:20:16.309607+00:00",
+  "ultralytics": "8.4.166"
+ },
+ "s_vd": {
+  "file": "yolo26s_visdrone.pt",
+  "name": "YOLO26s (VisDrone)",
+  "params": 9955604,
+  "saved": "2026-09-29T18:35:11.832834+00:00",
+  "ultralytics": "8.4.165"
+ },
+ "tile_uv": {
+  "file": "yolo26m_tile_uavdt.pt",
+  "name": "YOLO26m-Tile (UAVDT)",
+  "params": 21777514,
+  "saved": "2026-11-04T23:14:58.546850+00:00",
+  "ultralytics": "8.4.174"
+ },
+ "s_uv": {
+  "file": "yolo26s_uavdt.pt",
+  "name": "YOLO26s (UAVDT)",
+  "params": 9950186,
+  "saved": "2026-11-05T05:24:06.817505+00:00",
+  "ultralytics": "8.4.174"
+ },
+ "tile_uv_last": {
+  "file": "yolo26m_tile_uavdt_last.pt",
+  "name": "YOLO26m-Tile (UAVDT), last epoch",
+  "params": 21777514,
+  "saved": "2026-11-05T06:58:05.369372+00:00",
+  "ultralytics": "8.4.174"
+ },
+ "s_uv_last": {
+  "file": "yolo26s_uavdt_last.pt",
+  "name": "YOLO26s (UAVDT), last epoch",
+  "params": 9950186,
+  "saved": "2026-11-05T06:49:14.198148+00:00",
+  "ultralytics": "8.4.174"
+ }
+}

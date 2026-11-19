@@ -179,6 +179,12 @@ cd frontend && npm install && npm run dev    # UI with hot reload on :5173, prox
 npm run build                                # writes frontend/dist, which the server serves at /
 ```
 
+## Research code
+
+Training, evaluation and analysis code is in [`research/`](research/): the Kaggle notebooks that trained every model,
+the shared evaluation package, the conformal-interval and VLM-comparison scripts, and all result tables, figures and
+training logs. See [`research/README.md`](research/README.md).
+
 ---
 
 ## Tech stack
@@ -209,6 +215,7 @@ VisionQuery/
 ├── reports/             evaluation summaries shown on the app's "How it works" page
 ├── samples/             three VisDrone frames to try
 ├── tests/               unit tests
+├── research/            training notebooks, evaluation package, analysis scripts, results
 └── Dockerfile
 ```
 

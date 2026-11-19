@@ -1,0 +1,7 @@
+dataset,split,images,sequences,records,whole_records,whole_nonzero,bin_0,bin_1-8,bin_9-20,bin_21-50,bin_>50
+visdrone,val,548,76,41910,6006,4320,1686,2307,831,847,335
+visdrone,test-dev,1610,61,123860,17710,9975,7735,5730,2180,1526,539
+uavdt,val,367,5,8060,1180,764,416,429,129,206,0
+uavdt,test,1509,20,32804,4652,2781,1871,933,1075,648,125
+carpk,test,459,1,3213,459,459,0,17,9,21,412
+carpk,train,989,6,6923,989,989,0,7,32,659,291

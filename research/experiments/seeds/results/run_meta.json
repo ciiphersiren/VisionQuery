@@ -1,0 +1,16 @@
+{
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "weights": {
+  "0": "/kaggle/input/datasets/ciiphersiren/drone-dataset/yolo26m_tile_visdrone.pt",
+  "1": "/kaggle/input/notebooks/ciiphersiren/seed1/seeds_train_s1/yolo26m_tile_visdrone_seed1.pt",
+  "2": "/kaggle/input/datasets/ciiphersiren/seed-pt/yolo26m_tile_visdrone_seed2.pt"
+ },
+ "smoke": false,
+ "python": "3.13.16",
+ "torch": "2.11.0+cu130",
+ "ultralytics": "8.4.174"
+}

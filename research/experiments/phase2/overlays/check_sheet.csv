@@ -1,0 +1,21 @@
+n,dataset,split,image,target,region,record_count,human_count,human_ok,notes
+1,visdrone,test-dev,0000207_00000_d_0000001,people,right,4,4,yes,
+2,visdrone,test-dev,9999938_00000_d_0000170,vehicles,q1,12,12,yes,
+3,visdrone,test-dev,9999979_00000_d_0000036,motor,q2,1,1,yes,
+4,visdrone,test-dev,9999952_00000_d_0000220,pedestrian,whole,1,1,yes,
+5,visdrone,test-dev,9999973_00000_d_0000113,van,q3,3,3,yes,
+6,visdrone,test-dev,9999938_00000_d_0000220,vehicles,q2,2,2,yes,
+7,visdrone,test-dev,9999947_00000_d_0000015,vehicles,right,23,26,no,halves of 2 vehicles present but not boxed and an entire unboxed vehicle
+8,visdrone,test-dev,9999947_00000_d_0000023,vehicles,q2,25,25,yes,
+9,visdrone,test-dev,9999938_00000_d_0000011,van,q1,3,2,no,one boxed van is almost out of the frame 
+10,visdrone,test-dev,9999952_00000_d_0000238,van,left,4,4,yes,
+11,visdrone,test-dev,0000105_01556_d_0000069,motor,right,6,6,yes,
+12,visdrone,test-dev,0000063_08000_d_0000009,pedestrian,q2,4,2,no,2 of them are almost out of the frame
+13,visdrone,test-dev,9999973_00000_d_0000060,van,whole,1,1,yes,
+14,visdrone,test-dev,9999952_00000_d_0000162,van,right,4,4,yes,
+15,carpk,test,20161225_TPZ_00348,car,q1,35,33,no,2 of the boxed ones of them are almost out of the frame
+16,carpk,test,20161225_TPZ_00015,car,right,55,54,no,1 of the boxed ones is out of the frame
+17,carpk,test,20161225_TPZ_00333,car,q1,46,46,yes,
+18,carpk,train,20160331_NTU_00026,car,q1,2,3,no,1 car is present but not boxed
+19,carpk,train,20160524_GF1_00015,car,q2,2,2,yes,
+20,carpk,train,20161030_GF2_00025,car,q3,8,8,yes,

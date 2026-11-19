@@ -1,0 +1,6 @@
+model,pipeline,images,mean_s,median_s,min_s,max_s,cpu,threads
+YOLO26s (VisDrone),fi1280,10,0.26,0.26,0.25,0.28,Intel Core i5-12450H,12
+YOLO26s (VisDrone),fi1280+fi1920,10,0.93,0.93,0.89,1.0,Intel Core i5-12450H,12
+YOLO26m-Tile (VisDrone),sliced,10,16.18,13.96,11.41,27.8,Intel Core i5-12450H,12
+YOLO26m-Tile (UAVDT),fi1024,10,0.71,0.7,0.67,0.86,Intel Core i5-12450H,12
+YOLO26s (UAVDT),fi1024,10,0.25,0.26,0.24,0.26,Intel Core i5-12450H,12

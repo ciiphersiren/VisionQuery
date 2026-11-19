@@ -1,0 +1,32 @@
+{
+ "smoke": false,
+ "rule": "highest eval-v2 AP on val, full@1024",
+ "selected_epoch": 1,
+ "selected_checkpoint": "epoch0.pt",
+ "eval_v2": 0.27554509873408234,
+ "eval_v2_AP50": 0.438015754043605,
+ "per_class_AP": {
+  "car": 0.5230396381976735,
+  "truck": 0.14999985298789337,
+  "bus": 0.1535958050166802
+ },
+ "stripped_copy_eval_v2": 0.27554509873408234,
+ "ultralytics_best_pt_epochs": [
+  1
+ ],
+ "peaks_in_first_epochs": true,
+ "val_seqs": [
+  "M0201",
+  "M0402",
+  "M0604",
+  "M0902",
+  "M1006"
+ ],
+ "optimizer": {
+  "optimizer": "MuSGD",
+  "lr0": 0.01,
+  "momentum": 0.9,
+  "warmup_bias_lr": 0.0
+ },
+ "epochs_trained": 40
+}

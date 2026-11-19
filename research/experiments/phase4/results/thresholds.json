@@ -1,0 +1,24 @@
+{
+ "tile_vd": {
+  "pedestrian": 0.36,
+  "people": 0.29,
+  "bicycle": 0.34,
+  "car": 0.46,
+  "van": 0.46,
+  "truck": 0.45,
+  "tricycle": 0.48,
+  "awning-tricycle": 0.48,
+  "bus": 0.41,
+  "motor": 0.44
+ },
+ "tile_uv": {
+  "car": 0.46,
+  "truck": 0.49,
+  "bus": 0.9
+ },
+ "tile_uv_last": {
+  "car": 0.33,
+  "truck": 0.9,
+  "bus": 0.93
+ }
+}

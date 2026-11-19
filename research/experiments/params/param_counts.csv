@@ -1,0 +1,4 @@
+model,weights,params_stored,params_fused
+YOLO26m-Tile,yolo26m_tile_visdrone.pt,21788308,20357162
+YOLOE-26m-FT,yoloe26m_e2_full.pt,21788308,20357162
+YOLO26s,yolo26s_visdrone_sahi.pt,9955604,9469050
